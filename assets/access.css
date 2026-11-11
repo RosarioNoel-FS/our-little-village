@@ -1,0 +1,21 @@
+/* Shared accessibility controls for every page. */
+.skip-link{position:fixed;left:12px;top:-70px;z-index:100;padding:13px 20px;border-radius:999px;background:#fff;color:#0e0b22;font:700 16px "DM Sans",system-ui,sans-serif;text-decoration:none;box-shadow:0 12px 26px -10px rgba(0,0,0,.7);transition:top .2s ease}
+.skip-link:focus{top:12px}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+[tabindex="-1"]:focus{outline:none}
+
+.motion-btn{position:fixed;right:12px;bottom:12px;z-index:60;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 15px;border:1px solid rgba(255,255,255,.4);border-radius:999px;background:rgba(14,11,34,.82);color:#fff;font:700 13px "DM Sans",system-ui,sans-serif;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.motion-btn svg{width:12px;height:12px;fill:currentColor}
+.motion-btn:hover{background:#0e0b22}
+body.playing .motion-btn{display:none}
+
+.motion-paused .ticker div,.motion-paused .bal svg,.motion-paused .slide,.motion-paused .run{animation-play-state:paused!important}
+
+.legal{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:30px 16px 110px;color:#e7e4f5}
+.legal h2{font-size:clamp(28px,4vw,38px);line-height:1.12;margin:40px 0 10px;color:#fff}
+.legal p,.legal li{font-size:18px;line-height:1.6}
+.legal ul{padding-left:22px;margin-top:10px}
+.legal li{margin-top:6px}
+.legal a{color:#46e8e2}
+.legal .updated{color:#c9c5e0;font-size:16px;margin-top:44px}
+.phero.plain{grid-template-columns:1fr;min-height:0;padding-bottom:70px}
