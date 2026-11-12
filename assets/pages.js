@@ -72,6 +72,39 @@
     h.classList.add('split');
   });
 
+  // Page title slams in letter by letter, its accent word catches the light, and a burst goes off behind it.
+  var title = document.querySelector('.phero h1');
+  if (title && !reduced) {
+    var li = 0;
+    title.setAttribute('aria-label', title.textContent.replace(/\s+/g, ' ').trim());
+    (function split(node){
+      [].slice.call(node.childNodes).forEach(function(c){
+        if (c.nodeType === 1) return split(c);
+        if (c.nodeType !== 3) return;
+        var frag = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(function(part){
+          if (!part) return;
+          if (/^\s+$/.test(part)) return frag.appendChild(document.createTextNode(' '));
+          var w = document.createElement('span');
+          w.className = 'lw'; w.setAttribute('aria-hidden', 'true');
+          part.split('').forEach(function(ch){
+            var s = document.createElement('span');
+            s.className = 'lp'; s.textContent = ch; s.style.setProperty('--i', li++);
+            w.appendChild(s);
+          });
+          frag.appendChild(w);
+        });
+        c.parentNode.replaceChild(frag, c);
+      });
+    })(title);
+    var bits = '';
+    for (var q = 0; q < 22; q++) {
+      var ang = q / 22 * Math.PI * 2 + (q % 3) * .35, dist = 130 + q * 47 % 150;
+      bits += '<i class="' + (q % 3 === 0 ? 'star' : (q % 2 ? 'bit' : '')) + '" style="--k:' + look.colors[q % look.colors.length] + ';--s:' + (q % 3 === 0 ? 14 + q * 5 % 12 : 8 + q * 5 % 8) + 'px;--x:' + Math.round(Math.cos(ang) * dist * 1.5) + 'px;--y:' + Math.round(Math.sin(ang) * dist * .8) + 'px;--rot:' + (q * 67 % 360) + 'deg;--w:' + (q * 9 % 80) + 'ms"></i>';
+    }
+    title.insertAdjacentHTML('beforeend', '<span class="pfx" aria-hidden="true">' + bits + '</span>');
+  }
+
   [].forEach.call(document.querySelectorAll('.card'), function(card){
     [].forEach.call(card.children, function(c, j){ c.style.setProperty('--j', j); });
     // soft light that follows the pointer

@@ -212,3 +212,16 @@ footer div{display:flex;flex-wrap:wrap;gap:8px 26px;max-width:1180px;margin:0 au
 /* the six links only fit on one line from 1100px; narrower screens use Menu */
 @media (min-width:900px) and (max-width:1099px){.nav ul{display:none!important}.menu{display:block!important}}
 .nav li a{white-space:nowrap}
+
+/* Page title slam: letters land one by one, the accent word catches the light, a burst goes off behind. */
+.phero h1{position:relative;isolation:isolate}
+.phero h1 .lw{display:inline-block;white-space:nowrap}
+.phero h1 .lp{display:inline-block;animation:slam .55s cubic-bezier(.2,1.35,.4,1) both;animation-delay:calc(.2s + var(--i) * 30ms)}
+.phero h1 em .lp{animation:slam .55s cubic-bezier(.2,1.35,.4,1) both,glint .8s ease-in-out both;animation-delay:calc(.2s + var(--i) * 30ms),calc(1s + var(--i) * 55ms)}
+@keyframes slam{0%{opacity:0;transform:scale(2.2) translateY(-.1em)}45%{opacity:1}100%{opacity:1;transform:none}}
+@keyframes glint{45%{color:#fff;text-shadow:0 0 22px rgba(255,255,255,.95),0 0 5px #fff}}
+.pfx{position:absolute;left:34%;top:50%;width:0;height:0;pointer-events:none;z-index:-1}
+.pfx i{position:absolute;left:0;top:0;width:var(--s);height:var(--s);margin:calc(var(--s) / -2);border-radius:50%;background:var(--k);opacity:0;animation:pburst 1.35s cubic-bezier(.12,.75,.3,1) both;animation-delay:calc(.45s + var(--w))}
+.pfx i.bit{border-radius:2px;height:calc(var(--s) * .45)}
+.pfx i.star{border-radius:0;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+@keyframes pburst{0%{opacity:0;transform:translate(0,0) scale(.2) rotate(0)}12%{opacity:1}75%{opacity:1}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(1) rotate(var(--rot))}}

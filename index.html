@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Our Little Village | Events, Balloons &amp; Classes in Staten Island</title>
 <meta name="description" content="Events and decor for your village: custom backdrops, balloon arches, hand-made centerpieces, plus art and toddler classes in Staten Island, NY.">
+<link rel="canonical" href="https://ourlittlevillage.com/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0e0b22">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Our Little Village">
+<meta property="og:title" content="Our Little Village | Events, Balloons &amp; Classes in Staten Island">
+<meta property="og:description" content="Parties, classes, special events and custom balloon decor, all under one roof in Staten Island, NY.">
+<meta property="og:url" content="https://ourlittlevillage.com/">
+<meta property="og:image" content="https://ourlittlevillage.com/assets/og/home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Our Little Village: events and decor for your village, Staten Island">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Gloock&display=swap" rel="stylesheet">
@@ -36,10 +50,84 @@ a{color:inherit}
 .stage-site #film{opacity:0}
 .scrim{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease;background:linear-gradient(180deg,rgba(14,11,34,.45) 0%,rgba(14,11,34,.28) 34%,rgba(14,11,34,.92) 100%);pointer-events:none}
 
-.name{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:0 16px;font:400 clamp(46px,12.5vw,112px)/1.02 var(--display);text-shadow:0 4px 32px rgba(14,11,34,.65);pointer-events:none;transition:opacity .32s ease,filter .32s ease}
-.name span{display:inline-block;opacity:0;transform:translateY(.22em);filter:blur(10px)}
+.name{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:0 16px;font:400 clamp(46px,12.5vw,112px)/1.02 var(--display);pointer-events:none;transition:opacity .32s ease,filter .32s ease}
+.name>*{grid-area:1/1}
+.name::before{content:"";position:absolute;left:50%;top:50%;translate:-50% -50%;width:min(130vw,1200px);aspect-ratio:1.9;background:radial-gradient(closest-side,rgba(14,11,34,.78),rgba(14,11,34,.4) 60%,rgba(14,11,34,0));opacity:0;transition:opacity .5s ease}
+@media (max-width:899px){.name{font-size:clamp(52px,15vw,124px)}.name::before{aspect-ratio:1.05}}
+.stage-name .name::before{opacity:1}
+.name .set{filter:drop-shadow(0 6px 24px rgba(14,11,34,.85))}
 .name b{font-weight:inherit;display:inline-block;white-space:nowrap;margin:0 .13em}
-.stage-name .name span{opacity:1;transform:none;filter:blur(0);transition:opacity .34s ease,transform .5s var(--ease),filter .4s ease;transition-delay:calc(var(--i)*38ms)}
+.name .w span{display:inline-block;opacity:0;transform:scale(2.4);background:linear-gradient(90deg,#5ff3ec,#9cc4ff 50%,#dcb2ff);background-size:1600% 100%;background-position:calc(var(--i) * 6.667%) 0;-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .02em}
+.stage-name .name .w span{animation:slam .5s cubic-bezier(.2,1.35,.4,1) both;animation-delay:calc(var(--i) * 22ms)}
+@keyframes slam{0%{opacity:0;transform:scale(2.4)}45%{opacity:1}100%{opacity:1;transform:none}}
+.name .badge{display:block;width:clamp(76px,15vw,128px);height:clamp(76px,15vw,128px);margin:0 auto 12px;border-radius:50%;opacity:0;transform:scale(0) rotate(-220deg)}
+img.badge{box-shadow:0 0 0 2px rgba(255,255,255,.18),0 0 40px rgba(198,140,255,.55)}
+.stage-name .name img.badge{animation:badge .85s cubic-bezier(.3,1.55,.5,1) .16s both}
+@keyframes badge{to{opacity:1;transform:none}}
+.name .gleam{color:#fff;-webkit-mask-image:linear-gradient(105deg,transparent 40%,#000 50%,transparent 60%);mask-image:linear-gradient(105deg,transparent 40%,#000 50%,transparent 60%);-webkit-mask-size:300% 100%;mask-size:300% 100%;-webkit-mask-position:100% 0;mask-position:100% 0;opacity:0}
+.name .gleam .badge{visibility:hidden}
+.stage-name .name .gleam{animation:gleam 1s ease-in-out .78s both}
+@keyframes gleam{0%{opacity:.95;-webkit-mask-position:100% 0;mask-position:100% 0}100%{opacity:.95;-webkit-mask-position:0 0;mask-position:0 0}}
+.stage-name .name .fx i{animation:burst 1.3s cubic-bezier(.12,.75,.3,1) both;animation-delay:calc(.3s + var(--w) * 4)}
+
+/* The category words fly back in and collide into her name. */
+.gather{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.gather span{position:absolute;left:50%;top:50%;font:400 clamp(22px,3.6vw,44px)/1 var(--display);text-transform:uppercase;white-space:nowrap;color:var(--c);text-shadow:0 2px 18px rgba(14,11,34,.9);opacity:0;transform:translate(-50%,-50%) translate(calc(var(--x) * var(--sx,1)),var(--y))}
+@media (max-width:899px){.gather span{--sx:.62}}
+.stage-gather .gather span{animation:gather .6s cubic-bezier(.6,0,.9,.4) both;animation-delay:var(--w)}
+@keyframes gather{0%{opacity:0;transform:translate(-50%,-50%) translate(calc(var(--x) * var(--sx,1)),var(--y)) scale(1.15)}25%{opacity:1}80%{opacity:1}100%{opacity:0;transform:translate(-50%,-50%) scale(.15)}}
+.gather .flash{position:absolute;left:50%;top:50%;width:70vmax;height:70vmax;margin:-35vmax;border-radius:50%;background:radial-gradient(closest-side,#fff 0,rgba(255,255,255,.75) 22%,rgba(198,140,255,.3) 55%,rgba(70,232,226,0) 100%);opacity:0;transform:scale(0)}
+.stage-gather .gather .flash{animation:flash .75s ease-out .5s both}
+@keyframes flash{0%{opacity:0;transform:scale(.04)}22%{opacity:1}100%{opacity:0;transform:scale(1.7)}}
+.gather::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 70% at 50% 50%,#fff,rgba(240,226,255,.85) 45%,rgba(198,140,255,.35));opacity:0}
+.stage-gather .gather::after{animation:wash .55s ease-out .52s both}
+@keyframes wash{0%{opacity:0}18%{opacity:.85}100%{opacity:0}}
+.stage-site .gather{display:none}
+
+/* Word beats over the walkthrough: each category pops in on its own scene. */
+.beats{position:absolute;inset:0;pointer-events:none;transition:opacity .45s ease}
+.beats::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 46% at 50% 50%,rgba(14,11,34,.62),rgba(14,11,34,.28) 55%,rgba(14,11,34,0) 80%);opacity:0;transition:opacity .9s ease}
+.beats.live::before{opacity:1}
+.stage-name .beats,.stage-site .beats{opacity:0}
+.beat{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;text-align:center;padding:0 16px;--c:#fff}
+.beat .word{position:relative;z-index:1;max-width:11ch;font:400 clamp(50px,13.2vw,128px)/.94 var(--display);text-transform:uppercase;color:var(--c);text-shadow:0 3px 0 rgba(14,11,34,.4),0 10px 44px rgba(14,11,34,.8)}
+.beat .word b{font-weight:inherit;display:inline-block;white-space:nowrap;margin:0 .1em}
+.beat .word span{display:inline-block;opacity:0;transform:translateY(.55em) scale(.35) rotate(var(--r))}
+.beat.on .word span{animation:pop .66s cubic-bezier(.3,1.75,.5,1) both;animation-delay:calc(var(--i)*30ms)}
+.beat.wiggle.on .word span{animation:pop .66s cubic-bezier(.3,1.75,.5,1) both,wig .26s ease-in-out 4 alternate;animation-delay:calc(var(--i)*30ms),calc(.62s + var(--i)*30ms)}
+.beat.gone .word span{animation:lift .5s ease-in both;animation-delay:calc(var(--i)*14ms)}
+@keyframes pop{0%{opacity:0;transform:translateY(.55em) scale(.35) rotate(var(--r))}55%{opacity:1}100%{opacity:1;transform:none}}
+@keyframes wig{from{transform:rotate(-7deg) translateY(-.04em)}to{transform:rotate(7deg) translateY(.04em)}}
+@keyframes lift{from{opacity:1;transform:none;filter:blur(0)}to{opacity:0;transform:translateY(-.55em) scale(.92);filter:blur(10px)}}
+.beat .tag{position:relative;z-index:1;display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:10px 18px;border-radius:999px;background:rgba(14,11,34,.6);border:1px solid rgba(255,255,255,.22);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;font:700 clamp(12px,1.5vw,16px)/1.25 var(--body);letter-spacing:.14em;text-transform:uppercase;opacity:0;transform:translateY(14px)}
+.beat .tag::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--c);box-shadow:0 0 12px var(--c)}
+.beat.on .tag{opacity:1;transform:none;transition:opacity .4s ease .3s,transform .7s var(--ease) .3s}
+.beat.gone .tag{opacity:0;transform:translateY(-12px);transition:opacity .28s ease,transform .4s ease}
+.beat.welcome .kick{font:700 clamp(14px,1.9vw,20px)/1 var(--body);letter-spacing:.42em;text-transform:uppercase;padding-left:.42em;color:#fff;text-shadow:0 2px 18px rgba(14,11,34,.9);opacity:0;transform:translateY(10px)}
+.beat.welcome .big{font:400 clamp(72px,21vw,190px)/1 var(--display);padding:0 .06em .08em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;transform:scale(1.18);letter-spacing:-.02em}
+.beat.welcome.on .kick{opacity:1;transform:none;letter-spacing:.3em;transition:opacity .5s ease,transform .7s var(--ease),letter-spacing 1.4s var(--ease)}
+.beat.welcome.on .big{opacity:1;transform:none;transition:opacity .6s ease .18s,transform 1.3s var(--ease) .18s}
+.beat.welcome.gone .kick,.beat.welcome.gone .big{opacity:0;transform:translateY(-.3em);transition:opacity .35s ease,transform .45s ease}
+.beat.welcome .hold{display:grid}
+.beat.welcome .hold>*{grid-area:1/1}
+.beat.welcome .big.sh{background:none;color:rgba(14,11,34,.95);-webkit-text-stroke:.1em rgba(14,11,34,.9);filter:blur(12px)}
+.beat.skipped{visibility:hidden}
+.beat.place .kick{font-size:clamp(18px,2.6vw,28px)}
+.beat.place .tag{font-size:clamp(14px,1.9vw,19px);padding:12px 22px}
+.fx{position:absolute;left:50%;top:50%;width:0;height:0}
+.fx i{position:absolute;left:0;top:0;width:var(--s);height:var(--s);margin:calc(var(--s) / -2);border-radius:50%;background:var(--k);opacity:0}
+.fx i.bit{border-radius:2px;height:calc(var(--s) * .45)}
+.fx i.star{border-radius:0;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+.beat.on .fx i{animation:burst 1.25s cubic-bezier(.12,.75,.3,1) both;animation-delay:calc(.1s + var(--w))}
+@keyframes burst{0%{opacity:0;transform:translate(0,0) scale(.2) rotate(0)}12%{opacity:1}75%{opacity:1}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(1) rotate(var(--rot))}}
+.fx i.balloon{width:calc(var(--s) * 1.6);height:calc(var(--s) * 1.95);margin:0;border-radius:50% 50% 48% 48%/56% 56% 44% 44%;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.75) 0 9%,var(--k) 34%,color-mix(in srgb,var(--k) 62%,#000) 100%);top:auto;bottom:0}
+.beat.on .fx i.balloon{animation:float 1.5s cubic-bezier(.25,.6,.3,1) both;animation-delay:var(--w)}
+@keyframes float{0%{opacity:0;transform:translate(var(--x),60svh) rotate(-8deg)}20%{opacity:1}80%{opacity:1}100%{opacity:0;transform:translate(calc(var(--x) * 1.15),var(--y)) rotate(8deg)}}
+.beat .stroke{position:relative;z-index:0;width:min(78vw,620px);height:auto;margin-top:-.15em;overflow:visible}
+.beat .stroke path{fill:none;stroke:var(--c);stroke-width:11;stroke-linecap:round;stroke-dasharray:470;stroke-dashoffset:470;filter:drop-shadow(0 4px 14px rgba(14,11,34,.6))}
+.beat.on .stroke path{stroke-dashoffset:0;transition:stroke-dashoffset .75s cubic-bezier(.6,.05,.25,1) .3s}
+.beat.gone .stroke{opacity:0;transition:opacity .3s ease}
+@media (max-width:899px){.beat .tag{letter-spacing:.1em;max-width:calc(100vw - 48px)}}
 
 .nav{position:absolute;z-index:3;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;opacity:0;transform:translateY(-14px);transition:opacity .8s ease .15s,transform .8s var(--ease) .15s}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 20px var(--display)}
@@ -202,6 +290,53 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px}
 /* the six links only fit on one line from 1100px; narrower screens use Menu */
 @media (min-width:900px) and (max-width:1099px){.nav ul{display:none!important}.menu{display:block!important}}
 .nav li a{white-space:nowrap}
+
+/* ---- Scroll polish: letters pop in, bursts, shines (only when motion is allowed; see the last script) ---- */
+.js-pop .lw{display:inline-block;white-space:nowrap}
+.js-pop .lp{display:inline-block;opacity:0;transform:translateY(.5em) scale(.4) rotate(var(--r))}
+.js-pop .in .lp{animation:pop .66s cubic-bezier(.3,1.75,.5,1) both;animation-delay:calc(var(--d0,.1s) + var(--i) * 28ms)}
+.js-pop .in h3 em .lp,.js-pop .love.in h2 em .lp{animation:pop .66s cubic-bezier(.3,1.75,.5,1) both,glint .8s ease-in-out both;animation-delay:calc(var(--d0,.1s) + var(--i) * 28ms),calc(var(--d0,.1s) + .8s + var(--i) * 55ms)}
+.js-pop .ch[data-clip=toddler].in h3 .lp{animation:pop .66s cubic-bezier(.3,1.75,.5,1) both,wig .26s ease-in-out 4 alternate;animation-delay:calc(var(--d0) + var(--i) * 28ms),calc(var(--d0) + .62s + var(--i) * 28ms)}
+@keyframes glint{45%{color:#fff;text-shadow:0 0 22px rgba(255,255,255,.95),0 0 5px #fff}}
+.js-pop .ch h3,.js-pop .offer-head h2,.js-pop .closing h2{position:relative;isolation:isolate}
+.pfx{position:absolute;left:var(--fx-x,34%);top:50%;width:0;height:0;pointer-events:none;z-index:-1}
+.pfx i{position:absolute;left:0;top:0;width:var(--s);height:var(--s);margin:calc(var(--s) / -2);border-radius:50%;background:var(--k);opacity:0}
+.pfx i.bit{border-radius:2px;height:calc(var(--s) * .45)}
+.pfx i.star{border-radius:0;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+.pfx i.balloon{width:calc(var(--s) * 1.6);height:calc(var(--s) * 1.95);margin:0;border-radius:50% 50% 48% 48%/56% 56% 44% 44%;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.75) 0 9%,var(--k) 34%,color-mix(in srgb,var(--k) 62%,#000) 100%)}
+.in .pfx i{animation:burst 1.35s cubic-bezier(.12,.75,.3,1) both;animation-delay:calc(var(--d0,.1s) + .25s + var(--w))}
+.in .pfx i.balloon{animation:rise-up 2.4s cubic-bezier(.25,.6,.3,1) both;animation-delay:calc(var(--d0,.1s) + var(--w))}
+@keyframes rise-up{0%{opacity:0;transform:translate(var(--x),300px) rotate(-8deg)}15%{opacity:1}80%{opacity:1}100%{opacity:0;transform:translate(calc(var(--x) * 1.2),var(--y)) rotate(8deg)}}
+.js-pop .ch h3 em{position:relative;display:inline-block;isolation:isolate}
+.brush{position:absolute;left:-6%;bottom:-.1em;width:112%;height:.34em;overflow:visible;z-index:-1}
+.brush path{fill:none;stroke:#ff6fb5;stroke-width:14;stroke-linecap:round;stroke-dasharray:470;stroke-dashoffset:470}
+.in .brush path{stroke-dashoffset:0;transition:stroke-dashoffset .8s cubic-bezier(.6,.05,.25,1) .85s}
+
+/* Gradient words get a light that sweeps across them. */
+.offer-head em,.closing em,.copy h1 em{background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.95) 50%,transparent 60%) no-repeat,var(--grad);background-size:260% 100%,100% 100%;background-position:170% 0,0 0;-webkit-background-clip:text;background-clip:text}
+@keyframes shine{from{background-position:170% 0,0 0}to{background-position:-70% 0,0 0}}
+@keyframes shine-loop{0%{background-position:170% 0,0 0}28%,100%{background-position:-70% 0,0 0}}
+.js-pop .offer-head em,.js-pop .closing em{display:inline-block;--r:-6deg;opacity:0;transform:translateY(.4em) scale(.4) rotate(-6deg)}
+.js-pop .offer-head.in em{animation:pop .85s cubic-bezier(.3,1.6,.5,1) .3s both,shine 1.4s ease-in-out 1.15s both}
+.js-pop .closing.in em{animation:pop .85s cubic-bezier(.3,1.6,.5,1) .4s both,shine-loop 5s ease-in-out 1.25s infinite}
+.js-pop.stage-site .copy h1 em{animation:shine 1.6s ease-in-out 1.5s both}
+.js-pop .closing.in .btn.main{animation:ring 2.2s ease-out 1.6s 3}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(70,232,226,.75)}100%{box-shadow:0 0 0 22px rgba(70,232,226,0)}}
+.js-pop.motion-paused .closing.in em{animation:pop .85s cubic-bezier(.3,1.6,.5,1) .4s both}
+.js-pop.motion-paused .closing.in .btn.main{animation:none}
+
+/* Reviews: stars pop, numbers count, cards rise, the big quote writes on. */
+.js-pop .love .stars svg{transform:scale(0) rotate(-90deg);transition:transform .55s cubic-bezier(.3,1.8,.5,1)}
+.js-pop .love .go .stars svg,.js-pop .love .go.stars svg,.js-pop .loves figure.go .stars svg{transform:none}
+.js-pop .love .stars svg:nth-child(2){transition-delay:.08s}.js-pop .love .stars svg:nth-child(3){transition-delay:.16s}
+.js-pop .love .stars svg:nth-child(4){transition-delay:.24s}.js-pop .love .stars svg:nth-child(5){transition-delay:.32s}
+.js-pop .score .stars svg{transition-duration:.6s}
+.js-pop .loves figure{opacity:0;translate:0 36px;transition:opacity .7s ease,translate .9s var(--ease),box-shadow .4s ease;transition-delay:calc(var(--k) * .12s)}
+.js-pop .loves figure.go{opacity:1;translate:none}
+.js-pop .loves figure.go .stars svg{transition-delay:calc(var(--k) * .12s + .25s + var(--n) * .08s)}
+.js-pop .loves figure.go:hover{translate:0 -6px;box-shadow:0 34px 50px -30px rgba(63,15,44,.85);transition-delay:0s}
+.js-pop .pull .pw{display:inline-block;opacity:0;translate:0 .35em;filter:blur(6px);transition:opacity .5s ease,translate .7s var(--ease),filter .6s ease;transition-delay:calc(.45s + var(--i) * .07s)}
+.js-pop .love.in .pull .pw{opacity:1;translate:none;filter:none}
 </style>
 <link rel="stylesheet" href="assets/access.css">
 </head>
@@ -213,6 +348,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px}
     <video id="film" muted playsinline preload="auto"></video>
   </div>
   <div class="scrim"></div>
+  <div class="beats" id="beats" aria-hidden="true"></div>
+  <div class="gather" id="gather" aria-hidden="true"></div>
   <div class="name" id="name" aria-hidden="true"></div>
   <nav class="nav" aria-label="Main">
     <a class="brand" href="#top"><img src="assets/logo.png" alt=""><span>Our Little Village</span></a>
@@ -305,17 +442,85 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px}
 <script src="assets/motion.js"></script>
 <script>
 (function(){
-  var NAME_AT = 10.1, SITE_AT = 11.75;   // seconds into the walkthrough
+  var GATHER_AT = 9.8, NAME_AT = 10.4, SITE_AT = 12.2;   // seconds into the walkthrough
   var root = document.documentElement, body = document.body;
   var film = document.getElementById('film');
   var skip = document.getElementById('skip');
   var nameEl = document.getElementById('name');
-  var finished = false, nameShown = false;
+  var finished = false, nameShown = false, gathered = false;
 
-  var n = 0;
-  nameEl.innerHTML = '<div>' + 'Our Little Village'.split(' ').map(function(word){
-    return '<b>' + word.split('').map(function(ch){ return '<span style="--i:' + (n++) + '">' + ch + '</span>'; }).join('') + '</b>';
-  }).join(' ') + '</div>';
+  // Her name, a white copy on top for the shine sweep, and sparkles.
+  function nameSet(cls, badge){
+    var n = 0;
+    return '<div class="' + cls + '">' + badge + '<div>' + 'Our Little Village'.split(' ').map(function(word){
+      return '<b class="' + (cls === 'set' ? 'w' : '') + '">' + word.split('').map(function(ch){ return '<span style="--i:' + (n++) + '">' + ch + '</span>'; }).join('') + '</b>';
+    }).join(' ') + '</div></div>';
+  }
+  var stars = '';
+  for (var s = 0; s < 14; s++) {
+    var ang = s / 14 * Math.PI * 2 + .2, dist = 210 + s * 41 % 110;
+    stars += '<i class="star" style="--k:' + ['#ffffff','#46e8e2','#c68cff','#f6d77f','#ff6fa5'][s % 5] + ';--s:' + (12 + s * 5 % 14) + 'px;--x:' + Math.round(Math.cos(ang) * dist * 1.7) + 'px;--y:' + Math.round(Math.sin(ang) * dist * .8) + 'px;--rot:' + (s * 53 % 180) + 'deg;--w:' + (s * 17 % 90) + 'ms"></i>';
+  }
+  nameEl.innerHTML = '<div class="fx">' + stars + '</div>' +
+    nameSet('set', '<img class="badge" src="assets/logo-badge.png" alt="">') + nameSet('gleam', '<i class="badge"></i>');
+
+  var gatherEl = document.getElementById('gather');
+  gatherEl.innerHTML = [
+    ['Parties', '#ff6fa5', '-34vw', '-30svh', 0],
+    ['Balloons', '#f6d77f', '33vw', '-27svh', 40],
+    ['Special Events', '#c68cff', '-31vw', '27svh', 70],
+    ['Classes', '#ff8085', '35vw', '25svh', 25],
+    ['Creative Arts', '#ffd24d', '0vw', '38svh', 55]
+  ].map(function(g){ return '<span style="--c:' + g[1] + ';--x:' + g[2] + ';--y:' + g[3] + ';--w:' + g[4] + 'ms">' + g[0] + '</span>'; }).join('') + '<div class="flash"></div>';
+
+  // Word beats, timed to the scene each one sits on (seconds into the walkthrough).
+  var BEATS = [
+    {at:.3, to:1.9, kind:'welcome'},
+    {at:2.05, to:3.25, word:'Parties', tag:'Luxury & kids’ play packages', c:'#ff6fa5', fx:'confetti', k:['#ff6fa5','#ffd24d','#46e8e2','#ffffff','#c68cff']},
+    {at:3.4, to:4.65, word:'Balloons & Backdrops', tag:'Designed, delivered & installed', c:'#f6d77f', fx:'balloons', k:['#f6d77f','#ffffff','#ff9ec4','#f2e6c9','#46e8e2']},
+    {at:4.8, to:6.05, word:'Special Events', tag:'Ticketed fun all year long', c:'#c68cff', fx:'stars', k:['#c68cff','#46e8e2','#ffffff','#78b2ff','#f6d77f']},
+    {at:6.2, to:7.5, word:'Classes', tag:'Toddler play & drop-off', c:'#ff8085', fx:'confetti', wiggle:true, k:['#ff8085','#78b2ff','#17d8a8','#ffd24d','#ffffff']},
+    {at:7.65, to:8.9, word:'Creative Arts', tag:'Fine art for kids, teens & adults', c:'#ffd24d', fx:'stroke', k:['#ffd24d','#ff6fb5','#46e8e2']},
+    {at:9.0, to:9.8, kind:'place'}
+  ];
+  var beatsEl = document.getElementById('beats');
+  function esc(s){ return s.replace(/&/g, '&amp;'); }
+  function particles(b){
+    var out = '', n = b.fx === 'balloons' ? 7 : 22;
+    for (var j = 0; j < n; j++) {
+      var a = (j / n) * Math.PI * 2 + (j % 3) * .35, d = 150 + (j * 53 % 170), k = b.k[j % b.k.length];
+      if (b.fx === 'balloons') {
+        out += '<i class="balloon" style="--k:' + k + ';--s:' + (26 + j * 7 % 22) + 'px;--x:' + ((j - 3) * 13) + 'vw;--y:-' + (40 + j * 9 % 25) + 'svh;--w:' + (j * 70) + 'ms"></i>';
+      } else {
+        out += '<i class="' + (b.fx === 'stars' ? 'star' : (j % 2 ? 'bit' : '')) + '" style="--k:' + k + ';--s:' + (b.fx === 'stars' ? 14 + j * 7 % 16 : 8 + j * 5 % 9) + 'px;--x:' + Math.round(Math.cos(a) * d * 1.6) + 'px;--y:' + Math.round(Math.sin(a) * d) + 'px;--rot:' + (j * 67 % 360) + 'deg;--w:' + (j * 9 % 80) + 'ms"></i>';
+      }
+    }
+    return '<div class="fx">' + out + '</div>';
+  }
+  beatsEl.innerHTML = BEATS.map(function(b){
+    if (b.kind === 'welcome') return '<div class="beat welcome"><p class="kick">Welcome to the</p><div class="hold"><p class="big sh">village.</p><p class="big">village.</p></div></div>';
+    if (b.kind === 'place') return '<div class="beat welcome place" style="--c:#46e8e2"><p class="kick">All under one roof</p><p class="tag">Staten Island, NY</p></div>';
+    var i = 0;
+    var word = b.word.split(' ').map(function(w){
+      return '<b>' + w.split('').map(function(ch){ return '<span style="--i:' + (i++) + ';--r:' + ((i % 2 ? -1 : 1) * (6 + i * 7 % 10)) + 'deg">' + esc(ch) + '</span>'; }).join('') + '</b>';
+    }).join(' ');
+    return '<div class="beat' + (b.wiggle ? ' wiggle' : '') + '" style="--c:' + b.c + '">' + (b.fx === 'stroke' ? '' : particles(b)) +
+      '<p class="word">' + word + '</p>' +
+      (b.fx === 'stroke' ? '<svg class="stroke" viewBox="0 0 400 40" aria-hidden="true"><path d="M10 26C90 8 170 36 250 18S370 12 390 22"/></svg>' : '') +
+      '<p class="tag">' + esc(b.tag) + '</p></div>';
+  }).join('');
+  [].forEach.call(beatsEl.children, function(el, j){ BEATS[j].el = el; });
+  function beatsAt(t){
+    beatsEl.classList.toggle('live', t >= .15 && t < NAME_AT);
+    BEATS.forEach(function(b){
+      var s = t < b.at ? '' : t < b.to ? 'on' : 'gone';
+      if (s === b.s) return;
+      b.el.classList.toggle('skipped', s === 'gone' && b.s !== 'on');   // jumped past it (seek or stall): don't play its exit
+      b.s = s;
+      b.el.classList.toggle('on', s === 'on');
+      b.el.classList.toggle('gone', s === 'gone');
+    });
+  }
 
   // After the walkthrough, her sharpest media rotates behind the headline so nothing sits as a frozen video frame.
   var SLIDES = [
@@ -365,6 +570,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px}
 
   film.addEventListener('timeupdate', tick);
   function tick(){
+    if (!finished) beatsAt(film.currentTime);
+    if (!gathered && film.currentTime >= GATHER_AT) { gathered = true; root.classList.add('stage-gather'); }
     if (!nameShown && film.currentTime >= NAME_AT) { nameShown = true; root.classList.add('stage-name'); }
     if (film.currentTime >= SITE_AT) showSite(false);
   }
@@ -508,6 +715,121 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px}
   window.addEventListener('scroll', ask, { passive: true });
   window.addEventListener('resize', ask);
   update();
+})();
+</script>
+<script>
+// Scroll polish: letter pops, bursts and count-ups. Skipped entirely for reduced motion, so nothing is ever hidden.
+(function(){
+  if ((window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || !('IntersectionObserver' in window)) return;
+  var root = document.documentElement;
+  root.classList.add('js-pop');
+
+  function letters(el, d0){
+    var i = 0;
+    el.setAttribute('aria-label', el.textContent.replace(/\s+/g, ' ').trim());
+    (function walk(node){
+      [].slice.call(node.childNodes).forEach(function(c){
+        if (c.nodeType === 1) { if (!c.hasAttribute('data-whole')) walk(c); return; }
+        if (c.nodeType !== 3) return;
+        var frag = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(function(part){
+          if (!part) return;
+          if (/^\s+$/.test(part)) return frag.appendChild(document.createTextNode(' '));
+          var w = document.createElement('span');
+          w.className = 'lw'; w.setAttribute('aria-hidden', 'true');
+          part.split('').forEach(function(ch){
+            var s = document.createElement('span');
+            s.className = 'lp'; s.textContent = ch;
+            s.style.setProperty('--i', i);
+            s.style.setProperty('--r', ((i % 2 ? -1 : 1) * (6 + i * 7 % 10)) + 'deg');
+            i++; w.appendChild(s);
+          });
+          frag.appendChild(w);
+        });
+        c.parentNode.replaceChild(frag, c);
+      });
+    })(el);
+    el.style.setProperty('--d0', d0);
+  }
+
+  // kind: confetti | stars | balloons
+  function burst(cols, kind, x){
+    var out = '', n = kind === 'balloons' ? 6 : 20;
+    for (var j = 0; j < n; j++) {
+      var a = j / n * Math.PI * 2 + (j % 3) * .35, d = 120 + j * 47 % 140, k = cols[j % cols.length];
+      if (kind === 'balloons') out += '<i class="balloon" style="--k:' + k + ';--s:' + (22 + j * 7 % 18) + 'px;--x:' + ((j - 2.5) * 46) + 'px;--y:-' + (160 + j * 37 % 120) + 'px;--w:' + (j * 110) + 'ms"></i>';
+      else out += '<i class="' + (kind === 'stars' ? 'star' : (j % 2 ? 'bit' : '')) + '" style="--k:' + k + ';--s:' + (kind === 'stars' ? 13 + j * 7 % 14 : 8 + j * 5 % 8) + 'px;--x:' + Math.round(Math.cos(a) * d * 1.5) + 'px;--y:' + Math.round(Math.sin(a) * d * .8) + 'px;--rot:' + (j * 67 % 360) + 'deg;--w:' + (j * 9 % 80) + 'ms"></i>';
+    }
+    return '<span class="pfx" aria-hidden="true"' + (x ? ' style="--fx-x:' + x + '"' : '') + '>' + out + '</span>';
+  }
+
+  var FX = {
+    parties:  ['confetti', ['#ffffff', '#ffd24d', '#ffb3cd', '#46e8e2']],
+    'private':['stars',    ['#c2185b', '#d9b24c', '#8b46e8', '#ffffff']],
+    toddler:  ['confetti', ['#2750cf', '#e8413f', '#0ea883', '#ffffff']],
+    art:      ['stars',    ['#ffdc66', '#ff6fb5', '#46e8e2', '#ffffff']],
+    special:  ['stars',    ['#46e8e2', '#ffffff', '#f6d77f', '#c68cff']],
+    balloons: ['balloons', ['#fff0c4', '#ffffff', '#f6d77f', '#ff9ec4', '#46e8e2']]
+  };
+
+  var watch = [];
+  [].forEach.call(document.querySelectorAll('.ch'), function(ch){
+    var h = ch.querySelector('h3'), fx = FX[ch.getAttribute('data-clip')];
+    letters(h, '.15s');
+    h.insertAdjacentHTML('beforeend', burst(fx[1], fx[0], fx[0] === 'balloons' ? '88%' : ''));
+    if (ch.getAttribute('data-clip') === 'art') h.querySelector('em').insertAdjacentHTML('beforeend', '<svg class="brush" viewBox="0 0 400 40" aria-hidden="true"><path d="M10 26C90 8 170 36 250 18S370 12 390 22"/></svg>');
+  });
+
+  var offer = document.querySelector('.offer-head');
+  offer.querySelector('em').setAttribute('data-whole', '');
+  letters(offer.querySelector('h2'), '0s');
+  offer.querySelector('h2').insertAdjacentHTML('beforeend', burst(['#46e8e2', '#78b2ff', '#c68cff', '#ff5c97', '#ffd24d'], 'confetti', '50%'));
+  watch.push(offer);
+
+  var closing = document.querySelector('.closing');
+  closing.querySelector('em').setAttribute('data-whole', '');
+  letters(closing.querySelector('h2'), '0s');
+  closing.querySelector('h2').insertAdjacentHTML('beforeend', burst(['#46e8e2', '#78b2ff', '#c68cff', '#ff5c97', '#ffd24d', '#ffffff'], 'confetti', '50%'));
+  watch.push(closing);
+
+  letters(document.querySelector('.love h2'), '.15s');
+  var pull = document.querySelector('.pull p'), wi = 0;
+  pull.setAttribute('aria-label', pull.textContent);
+  pull.innerHTML = pull.textContent.split(' ').map(function(w){ return '<span class="pw" aria-hidden="true" style="--i:' + (wi++) + '">' + w + '</span>'; }).join(' ');
+
+  var score = document.querySelector('.score');
+  watch.push(score);
+  [].forEach.call(document.querySelectorAll('.loves figure'), function(f, k){
+    f.style.setProperty('--k', k % 3);
+    [].forEach.call(f.querySelectorAll('.stars svg'), function(s, n){ s.style.setProperty('--n', n); });
+    watch.push(f);
+  });
+
+  function count(el, to, decimals, ms){
+    var t0 = null;
+    (function step(t){
+      if (t0 === null) t0 = t;
+      var p = Math.min(1, (t - t0) / ms), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = (to * e).toFixed(decimals);
+      if (p < 1) requestAnimationFrame(step);
+    })(performance.now());
+  }
+
+  var seen = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      seen.unobserve(el);
+      if (el === offer || el === closing) { el.classList.add('in'); return; }
+      el.classList.add('go');
+      if (el === score) {
+        var b = score.querySelector('b'), sp = score.querySelector('span'), m = sp.textContent.match(/^(\d+)(.*)$/);
+        count(b, 5, 1, 1100);
+        if (m) { sp.innerHTML = '<span class="cnt">0</span>' + m[2]; count(sp.firstChild, +m[1], 0, 1400); }
+      }
+    });
+  }, { threshold: .3 });
+  watch.forEach(function(el){ seen.observe(el); });
 })();
 </script>
 </body>
