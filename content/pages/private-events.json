@@ -1,0 +1,176 @@
+{
+  "title": "Private Events & Playdates",
+  "heading": "Private Events & *Playdates*",
+  "description": "Private playdates, themed specialty playdates and private adults' nights at Our Little Village in Staten Island.",
+  "intro": "Exclusive venue access with zero stress and zero mess. Skip the setup and the cleanup.",
+  "buttons": [
+    {
+      "label": "Book a playdate",
+      "to": "contact"
+    },
+    {
+      "label": "See our work",
+      "to": "work"
+    }
+  ],
+  "statement": "Zero stress. *Zero mess.*",
+  "sections": [
+    {
+      "heading": "For the *kids.*",
+      "intro": "",
+      "ribbon": [],
+      "cards": [
+        {
+          "tag": "2 hours · Whole facility",
+          "title": "Private Playdates",
+          "subtitle": "The whole place, just for your group",
+          "text": "Why host a rowdy crowd at home? Kids get space to run and play hard while parents unwind, completely host-free.",
+          "facts": [
+            {
+              "label": "Pricing",
+              "value": "$35 to $40 per parent/child pair"
+            }
+          ],
+          "bullets": [
+            {
+              "bold": "",
+              "text": "Servings of fresh pizza"
+            },
+            {
+              "bold": "",
+              "text": "Beverages for all guests"
+            },
+            {
+              "bold": "",
+              "text": "Access to our signature coffee bar"
+            }
+          ],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "",
+            "to": "text"
+          },
+          "wide": false
+        },
+        {
+          "tag": "Seasonal",
+          "title": "Themed & Specialty Playdates",
+          "subtitle": "Curated events for friends and classmates",
+          "text": "From festive holiday celebrations to school class meet-and-greets, we make it easy to gather your crew.",
+          "facts": [],
+          "bullets": [
+            {
+              "bold": "",
+              "text": "A decorated festive tablescape"
+            },
+            {
+              "bold": "",
+              "text": "Organized games"
+            },
+            {
+              "bold": "",
+              "text": "A custom craft keepsake for the kids"
+            },
+            {
+              "bold": "",
+              "text": "Optional catering upgrades"
+            }
+          ],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "",
+            "to": "text"
+          },
+          "wide": false
+        }
+      ],
+      "note": "Private Playdates and Specialty Events are available on weekdays and select weekends."
+    },
+    {
+      "heading": "For the *grown-ups.*",
+      "intro": "",
+      "ribbon": [],
+      "cards": [
+        {
+          "tag": "All-inclusive",
+          "title": "Private Adults' Night Out",
+          "subtitle": "Birthdays, milestone gatherings or a private crew hangout",
+          "text": "Want the place all to yourselves? We handle everything from start to finish.",
+          "facts": [],
+          "bullets": [
+            {
+              "bold": "Cuisine & cocktails",
+              "text": "Premium custom catering with curated signature cocktails and beverages"
+            },
+            {
+              "bold": "Delectable desserts",
+              "text": "A beautifully styled display of high-end treats"
+            },
+            {
+              "bold": "Custom crafts & decor",
+              "text": "Immersive styling, premium tablescapes and a craft experience tailored to your group"
+            }
+          ],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "Text to book your night",
+            "to": "text"
+          },
+          "wide": true
+        }
+      ],
+      "note": ""
+    }
+  ],
+  "photo": {
+    "image": "/assets/work/private-a.jpg",
+    "alt": "Tea party table setting with roses"
+  },
+  "gallery": [
+    {
+      "image": "/assets/work/private-c.jpg",
+      "alt": "Stacked teacup tower with pastel balloons"
+    },
+    {
+      "image": "/assets/work/private-a.jpg",
+      "alt": "Table setting with roses and a sprinkled donut"
+    },
+    {
+      "image": "/assets/work/private-d.jpg",
+      "alt": "Floral plate with decorated treats"
+    },
+    {
+      "image": "/assets/work/private-e.jpg",
+      "alt": "Pastel balloon column with roses and greenery"
+    },
+    {
+      "image": "/assets/work/private-b.jpg",
+      "alt": "Event room with pink tables and a draped ceiling"
+    },
+    {
+      "image": "/assets/work/parties-b.jpg",
+      "alt": "Teacup centerpiece with spring flowers"
+    }
+  ]
+}

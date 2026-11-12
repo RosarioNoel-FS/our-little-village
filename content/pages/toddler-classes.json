@@ -1,0 +1,150 @@
+{
+  "title": "Weekly Classes",
+  "heading": "Weekly *Classes*",
+  "description": "Toddler Tuesday open play and Drop-Off & Play Thursday for children 18 months and up in Staten Island.",
+  "intro": "Learn, play and grow together, with open play for toddlers and a gentle drop-off program.",
+  "buttons": [
+    {
+      "label": "Save your spot",
+      "to": "text"
+    },
+    {
+      "label": "See our work",
+      "to": "work"
+    }
+  ],
+  "statement": "Learn. Play. *Grow.*",
+  "sections": [
+    {
+      "heading": "",
+      "intro": "",
+      "ribbon": [],
+      "cards": [
+        {
+          "tag": "Open play",
+          "title": "Toddler Tuesday",
+          "subtitle": "Safe exploring for toddlers, social time for caregivers",
+          "text": "A specialty open play session for toddlers, with a complimentary cup of fresh coffee for the grown-ups.",
+          "facts": [
+            {
+              "label": "When",
+              "value": "Tuesdays, 10:00 to 11:30 AM"
+            },
+            {
+              "label": "Pricing",
+              "value": "$15 per session with a monthly commitment, or $20 walk-in"
+            },
+            {
+              "label": "How to join",
+              "value": "Walk-ins are always welcome. Sign-ups are appreciated."
+            }
+          ],
+          "bullets": [],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "Text to save your spot",
+            "to": "text"
+          },
+          "wide": false
+        },
+        {
+          "tag": "Drop-off · 2 hours",
+          "title": "Drop-Off & Play Thursday",
+          "subtitle": "Gentle separation, real confidence",
+          "text": "A child-led session that eases early separation and encourages gentle socialization at your child's own pace. Premier preschool prep, and two free hours for you.",
+          "facts": [
+            {
+              "label": "Ages",
+              "value": "18 months and up. Potty training is not required."
+            },
+            {
+              "label": "When",
+              "value": "Thursdays, 9:30 to 11:30 AM"
+            },
+            {
+              "label": "Pricing",
+              "value": "$200 for the monthly series"
+            }
+          ],
+          "bullets": [],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "Text to sign up",
+            "to": "text"
+          },
+          "wide": false
+        }
+      ],
+      "note": ""
+    },
+    {
+      "heading": "",
+      "intro": "",
+      "ribbon": [],
+      "cards": [
+        {
+          "tag": "Pop-ups",
+          "title": "Special Guest Teachers",
+          "subtitle": "Fresh, unique learning experiences",
+          "text": "We routinely host outside educators and creators for pop-up classes. Follow us on Instagram for upcoming themes and schedules, or text us so you never miss a special class.",
+          "facts": [],
+          "bullets": [],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "Follow on Instagram",
+            "to": "instagram"
+          },
+          "wide": true
+        }
+      ],
+      "note": ""
+    }
+  ],
+  "photo": {
+    "image": "/assets/work/toddler-a.jpg",
+    "alt": "Brightly colored wooden blocks"
+  },
+  "gallery": [
+    {
+      "image": "/assets/work/toddler-a.jpg",
+      "alt": "Colorful wooden building blocks"
+    },
+    {
+      "image": "/assets/work/toddler-d.jpg",
+      "alt": "Sensory bin with a toy shark and rubber ducks"
+    },
+    {
+      "image": "/assets/work/toddler-c.jpg",
+      "alt": "Hand scooping blue sensory material"
+    },
+    {
+      "image": "/assets/work/toddler-e.jpg",
+      "alt": "Play tunnel and painted activity mats"
+    },
+    {
+      "image": "/assets/work/toddler-b.jpg",
+      "alt": "Pink rice in a sensory bin"
+    }
+  ]
+}

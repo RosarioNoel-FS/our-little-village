@@ -1,0 +1,123 @@
+{
+  "title": "GO OLV",
+  "heading": "GO *OLV*",
+  "description": "GO OLV brings custom decor to your home, restaurant or venue in Staten Island: backdrops, balloon work, centerpieces, favors and signature gifts.",
+  "intro": "We bring the magic to you. Custom decor designed, delivered and installed at your home, restaurant or chosen venue.",
+  "buttons": [
+    {
+      "label": "Get a free quote",
+      "to": "text"
+    },
+    {
+      "label": "See our work",
+      "to": "work"
+    }
+  ],
+  "statement": "So much more than *just balloons.*",
+  "sections": [
+    {
+      "heading": "For *any occasion.*",
+      "intro": "",
+      "ribbon": [
+        "Bridal & baby showers",
+        "Bachelorette parties",
+        "Milestone birthdays & Sweet 16s",
+        "Baptisms, communions & confirmations",
+        "Graduations",
+        "Holiday & corporate gatherings"
+      ],
+      "cards": [
+        {
+          "tag": "Design · Deliver · Install",
+          "title": "What We Bring to Life",
+          "subtitle": "Versatile, professional decor for any aesthetic",
+          "text": "",
+          "facts": [],
+          "bullets": [
+            {
+              "bold": "Grand backdrop displays",
+              "text": "Immersive, multi-leveled focal points that anchor your room"
+            },
+            {
+              "bold": "Custom balloon work",
+              "text": "Modern accent clusters and striking organic installations"
+            },
+            {
+              "bold": "Tailor-made centerpieces",
+              "text": "Tablescapes customized down to the last detail"
+            },
+            {
+              "bold": "Curated party favors",
+              "text": "Beautifully packaged favors that match your theme"
+            }
+          ],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "",
+            "to": "text"
+          },
+          "wide": false
+        },
+        {
+          "tag": "Made to order",
+          "title": "OLV Signature Gifts & Keepsakes",
+          "subtitle": "Custom curated. Made specially for you.",
+          "text": "Handcrafted treasures for life's big moments, from personalized holiday keepsakes to custom milestone tokens. We design, style and beautifully package every piece.",
+          "facts": [],
+          "bullets": [],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "Text to order a gift",
+            "to": "text"
+          },
+          "wide": false
+        }
+      ],
+      "note": ""
+    }
+  ],
+  "photo": {
+    "image": "/assets/work/balloons-a.jpg",
+    "alt": "Two balloon columns in purple, black and pink"
+  },
+  "gallery": [
+    {
+      "image": "/assets/work/balloons-a.jpg",
+      "alt": "Balloon columns in purple, black and pink"
+    },
+    {
+      "image": "/assets/work/balloons-f.jpg",
+      "alt": "Green and white twisted balloon arch"
+    },
+    {
+      "image": "/assets/work/balloons-b.jpg",
+      "alt": "Peach, olive and gold balloon arch"
+    },
+    {
+      "image": "/assets/work/balloons-c.jpg",
+      "alt": "Silver and burgundy balloons with disco balls"
+    },
+    {
+      "image": "/assets/work/balloons-e.jpg",
+      "alt": "Magenta balloon garland under purple light"
+    },
+    {
+      "image": "/assets/work/special-b.jpg",
+      "alt": "Wine glass display with a burgundy and gold garland"
+    }
+  ]
+}

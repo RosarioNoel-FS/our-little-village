@@ -1,0 +1,84 @@
+{
+  "heading": "What *we do*",
+  "intro": "From kids' parties to every other kind of celebration, here's how we can help.",
+  "panels": {
+    "parties": {
+      "heading": "Birthday *Parties*",
+      "text": "Luxury three-hour packages with the whole venue, or play-packed parties built around the kids.",
+      "button": "Explore parties",
+      "photo_1": {
+        "image": "/assets/work/parties-a.jpg",
+        "alt": "Strawberry-themed birthday centerpiece on a pink table"
+      },
+      "photo_2": {
+        "image": "/assets/work/parties-b.jpg",
+        "alt": "Teacup tower centerpiece with spring flowers"
+      }
+    },
+    "private": {
+      "heading": "Private Events & *Playdates*",
+      "text": "Private playdates, themed specialty playdates and all-inclusive adults’ nights. Zero stress, zero mess.",
+      "button": "Explore private events",
+      "photo_1": {
+        "image": "/assets/work/private-a.jpg",
+        "alt": "Tea party table setting with roses and a sprinkled donut"
+      },
+      "photo_2": {
+        "image": "/assets/work/private-b.jpg",
+        "alt": "Event room with pink dressed tables and draped ceiling"
+      }
+    },
+    "toddler": {
+      "heading": "Weekly *Classes*",
+      "text": "Toddler Tuesday open play and Drop-Off & Play Thursday, plus pop-ups from special guest teachers.",
+      "button": "Explore weekly classes",
+      "photo_1": {
+        "image": "/assets/work/toddler-a.jpg",
+        "alt": "Brightly colored wooden building blocks"
+      },
+      "photo_2": {
+        "image": "/assets/work/toddler-b.jpg",
+        "alt": "Pink rice in a sensory play bin"
+      }
+    },
+    "art": {
+      "heading": "Creative *Arts*",
+      "text": "Real studio techniques for kids, teens and adults: Little Artists, Jr. Artists and 1:1 portfolio prep.",
+      "button": "Explore creative arts",
+      "photo_1": {
+        "image": "/assets/work/art-a.jpg",
+        "alt": "Handmade colorful mosaic plate"
+      },
+      "photo_2": {
+        "image": "/assets/work/art-b.jpg",
+        "alt": "Hand squeezing red paint onto a palette"
+      }
+    },
+    "special": {
+      "heading": "Special *Events*",
+      "text": "Ticketed community events all year, from The Great Egg Hunt to Moms’ Night Out.",
+      "button": "Explore special events",
+      "photo_1": {
+        "image": "/assets/work/special-a.jpg",
+        "alt": "Glitter guitar display with purple and teal balloons"
+      },
+      "photo_2": {
+        "image": "/assets/work/special-b.jpg",
+        "alt": "Giant wine glass display with a burgundy and gold balloon garland"
+      }
+    },
+    "balloons": {
+      "heading": "GO *OLV*",
+      "text": "We bring the magic to you: backdrops, balloon work, centerpieces and favors at your home or venue, plus signature gifts.",
+      "button": "Explore GO OLV",
+      "photo_1": {
+        "image": "/assets/work/balloons-a.jpg",
+        "alt": "Two balloon columns in purple, black and pink"
+      },
+      "photo_2": {
+        "image": "/assets/work/balloons-b.jpg",
+        "alt": "Peach, olive and gold balloon arch in a doorway"
+      }
+    }
+  }
+}

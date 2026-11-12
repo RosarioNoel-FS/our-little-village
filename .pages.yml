@@ -1,0 +1,948 @@
+# Pages CMS (pagescms.org) editor for ourlittlevillage.com. Saving commits here; .github/workflows/cms.yml rebuilds the pages.
+media:
+  input: assets/work
+  output: /assets/work
+  extensions: [jpg, jpeg, png, webp]
+  rename: safe
+
+settings:
+  content:
+    merge: true
+
+content:
+  - name: home
+    label: "Homepage: What we do"
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - { name: heading, label: Section heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - { name: intro, label: Line under the heading, type: text, required: true }
+      - name: panels
+        label: Panels
+        type: object
+        fields:
+          - name: parties
+            label: "01 Birthday Parties"
+            type: object
+            fields:
+              - { name: heading, label: Heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+              - { name: text, label: Text, type: text, required: true }
+              - { name: button, label: Button words, type: string, required: true }
+              - name: photo_1
+                label: Photo 1
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+              - name: photo_2
+                label: Photo 2
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+          - name: private
+            label: "02 Private Events"
+            type: object
+            fields:
+              - { name: heading, label: Heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+              - { name: text, label: Text, type: text, required: true }
+              - { name: button, label: Button words, type: string, required: true }
+              - name: photo_1
+                label: Photo 1
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+              - name: photo_2
+                label: Photo 2
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+          - name: toddler
+            label: "03 Weekly Classes"
+            type: object
+            fields:
+              - { name: heading, label: Heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+              - { name: text, label: Text, type: text, required: true }
+              - { name: button, label: Button words, type: string, required: true }
+              - name: photo_1
+                label: Photo 1
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+              - name: photo_2
+                label: Photo 2
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+          - name: art
+            label: "04 Creative Arts"
+            type: object
+            fields:
+              - { name: heading, label: Heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+              - { name: text, label: Text, type: text, required: true }
+              - { name: button, label: Button words, type: string, required: true }
+              - name: photo_1
+                label: Photo 1
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+              - name: photo_2
+                label: Photo 2
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+          - name: special
+            label: "05 Special Events"
+            type: object
+            fields:
+              - { name: heading, label: Heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+              - { name: text, label: Text, type: text, required: true }
+              - { name: button, label: Button words, type: string, required: true }
+              - name: photo_1
+                label: Photo 1
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+              - name: photo_2
+                label: Photo 2
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+          - name: balloons
+            label: "06 GO OLV"
+            type: object
+            fields:
+              - { name: heading, label: Heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+              - { name: text, label: Text, type: text, required: true }
+              - { name: button, label: Button words, type: string, required: true }
+              - name: photo_1
+                label: Photo 1
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+              - name: photo_2
+                label: Photo 2
+                type: object
+                fields:
+                  - name: image
+                    label: Photo
+                    type: image
+                    required: true
+                  - name: alt
+                    label: Describe the photo
+                    description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+                    type: string
+                    required: true
+
+  - name: parties
+    label: "Birthday Parties page"
+    type: file
+    path: content/pages/parties.json
+    format: json
+    fields:
+      - { name: title, label: Page name, type: string, required: true, description: Shows in the browser tab, search results and the Next link. }
+      - { name: heading, label: Big heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - { name: description, label: Search description, type: text, required: true, description: What Google shows under the page name. One or two sentences. }
+      - { name: intro, label: Intro under the heading, type: text, required: true }
+      - name: buttons
+        label: Top buttons
+        type: object
+        list: { min: 1, max: 2 }
+        fields:
+          - { name: label, label: Words, type: string, required: true }
+          - name: to
+            label: Goes to
+            type: select
+            options:
+              values:
+                - { name: text, label: "Text us (347-327-8166)" }
+                - { name: call, label: "Call us (718-889-1374)" }
+                - { name: instagram, label: "Instagram" }
+                - { name: contact, label: "Contact page" }
+                - { name: work, label: "Photos further down this page" }
+      - { name: statement, label: Big statement line, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - name: sections
+        label: Sections
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
+        fields:
+          - { name: heading, label: Section heading, type: string, description: "Optional. Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+          - { name: intro, label: Section intro, type: text, description: Optional. }
+          - { name: ribbon, label: Scrolling ribbon words, type: string, list: true, description: Optional. }
+          - name: cards
+            label: Cards
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - { name: tag, label: Small label on top, type: string, required: true, description: "Like: 3 hours · Full venue" }
+              - { name: title, label: Card title, type: string, required: true }
+              - { name: subtitle, label: Line under the title, type: string, required: true }
+              - { name: text, label: Paragraph, type: text, description: Optional. }
+              - name: facts
+                label: Facts (label and value)
+                description: "Optional. Like: When / Tuesdays, 10:00 to 11:30 AM"
+                type: object
+                list: true
+                fields:
+                  - { name: label, label: Label, type: string, required: true }
+                  - { name: value, label: Value, type: string, required: true }
+              - name: bullets
+                label: Bullet list
+                description: Optional. The bold part is optional too.
+                type: object
+                list: true
+                fields:
+                  - { name: bold, label: Bold start, type: string }
+                  - { name: text, label: Text, type: string, required: true }
+              - name: chips
+                label: Pill list
+                description: Optional. Leave the list empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Heading, type: string }
+                  - { name: list, label: Pills, type: string, list: true }
+              - name: note
+                label: Highlighted note
+                description: Optional. Leave the text empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Bold start, type: string }
+                  - { name: text, label: Text, type: text }
+              - name: button
+                label: Link at the bottom
+                description: Optional. Leave the words empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Words, type: string }
+                  - name: to
+                    label: Goes to
+                    type: select
+                    options:
+                      values:
+                        - { name: text, label: "Text us (347-327-8166)" }
+                        - { name: call, label: "Call us (718-889-1374)" }
+                        - { name: instagram, label: "Instagram" }
+                        - { name: contact, label: "Contact page" }
+                        - { name: work, label: "Photos further down this page" }
+              - { name: wide, label: Full width, type: boolean }
+          - { name: note, label: Small note under the cards, type: text, description: Optional. }
+      - name: photo
+        label: Floating photo next to the heading
+        type: object
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+          - name: alt
+            label: Describe the photo
+            description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+            type: string
+            required: true
+      - name: gallery
+        label: Photo gallery
+        type: object
+        list: { min: 3, max: 12 }
+        fields:
+          - { name: image, label: Photo, type: image, required: true }
+          - { name: alt, label: Describe the photo, type: string, required: true }
+
+  - name: private-events
+    label: "Private Events & Playdates page"
+    type: file
+    path: content/pages/private-events.json
+    format: json
+    fields:
+      - { name: title, label: Page name, type: string, required: true, description: Shows in the browser tab, search results and the Next link. }
+      - { name: heading, label: Big heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - { name: description, label: Search description, type: text, required: true, description: What Google shows under the page name. One or two sentences. }
+      - { name: intro, label: Intro under the heading, type: text, required: true }
+      - name: buttons
+        label: Top buttons
+        type: object
+        list: { min: 1, max: 2 }
+        fields:
+          - { name: label, label: Words, type: string, required: true }
+          - name: to
+            label: Goes to
+            type: select
+            options:
+              values:
+                - { name: text, label: "Text us (347-327-8166)" }
+                - { name: call, label: "Call us (718-889-1374)" }
+                - { name: instagram, label: "Instagram" }
+                - { name: contact, label: "Contact page" }
+                - { name: work, label: "Photos further down this page" }
+      - { name: statement, label: Big statement line, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - name: sections
+        label: Sections
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
+        fields:
+          - { name: heading, label: Section heading, type: string, description: "Optional. Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+          - { name: intro, label: Section intro, type: text, description: Optional. }
+          - { name: ribbon, label: Scrolling ribbon words, type: string, list: true, description: Optional. }
+          - name: cards
+            label: Cards
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - { name: tag, label: Small label on top, type: string, required: true, description: "Like: 3 hours · Full venue" }
+              - { name: title, label: Card title, type: string, required: true }
+              - { name: subtitle, label: Line under the title, type: string, required: true }
+              - { name: text, label: Paragraph, type: text, description: Optional. }
+              - name: facts
+                label: Facts (label and value)
+                description: "Optional. Like: When / Tuesdays, 10:00 to 11:30 AM"
+                type: object
+                list: true
+                fields:
+                  - { name: label, label: Label, type: string, required: true }
+                  - { name: value, label: Value, type: string, required: true }
+              - name: bullets
+                label: Bullet list
+                description: Optional. The bold part is optional too.
+                type: object
+                list: true
+                fields:
+                  - { name: bold, label: Bold start, type: string }
+                  - { name: text, label: Text, type: string, required: true }
+              - name: chips
+                label: Pill list
+                description: Optional. Leave the list empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Heading, type: string }
+                  - { name: list, label: Pills, type: string, list: true }
+              - name: note
+                label: Highlighted note
+                description: Optional. Leave the text empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Bold start, type: string }
+                  - { name: text, label: Text, type: text }
+              - name: button
+                label: Link at the bottom
+                description: Optional. Leave the words empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Words, type: string }
+                  - name: to
+                    label: Goes to
+                    type: select
+                    options:
+                      values:
+                        - { name: text, label: "Text us (347-327-8166)" }
+                        - { name: call, label: "Call us (718-889-1374)" }
+                        - { name: instagram, label: "Instagram" }
+                        - { name: contact, label: "Contact page" }
+                        - { name: work, label: "Photos further down this page" }
+              - { name: wide, label: Full width, type: boolean }
+          - { name: note, label: Small note under the cards, type: text, description: Optional. }
+      - name: photo
+        label: Floating photo next to the heading
+        type: object
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+          - name: alt
+            label: Describe the photo
+            description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+            type: string
+            required: true
+      - name: gallery
+        label: Photo gallery
+        type: object
+        list: { min: 3, max: 12 }
+        fields:
+          - { name: image, label: Photo, type: image, required: true }
+          - { name: alt, label: Describe the photo, type: string, required: true }
+
+  - name: toddler-classes
+    label: "Weekly Classes page"
+    type: file
+    path: content/pages/toddler-classes.json
+    format: json
+    fields:
+      - { name: title, label: Page name, type: string, required: true, description: Shows in the browser tab, search results and the Next link. }
+      - { name: heading, label: Big heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - { name: description, label: Search description, type: text, required: true, description: What Google shows under the page name. One or two sentences. }
+      - { name: intro, label: Intro under the heading, type: text, required: true }
+      - name: buttons
+        label: Top buttons
+        type: object
+        list: { min: 1, max: 2 }
+        fields:
+          - { name: label, label: Words, type: string, required: true }
+          - name: to
+            label: Goes to
+            type: select
+            options:
+              values:
+                - { name: text, label: "Text us (347-327-8166)" }
+                - { name: call, label: "Call us (718-889-1374)" }
+                - { name: instagram, label: "Instagram" }
+                - { name: contact, label: "Contact page" }
+                - { name: work, label: "Photos further down this page" }
+      - { name: statement, label: Big statement line, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - name: sections
+        label: Sections
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
+        fields:
+          - { name: heading, label: Section heading, type: string, description: "Optional. Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+          - { name: intro, label: Section intro, type: text, description: Optional. }
+          - { name: ribbon, label: Scrolling ribbon words, type: string, list: true, description: Optional. }
+          - name: cards
+            label: Cards
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - { name: tag, label: Small label on top, type: string, required: true, description: "Like: 3 hours · Full venue" }
+              - { name: title, label: Card title, type: string, required: true }
+              - { name: subtitle, label: Line under the title, type: string, required: true }
+              - { name: text, label: Paragraph, type: text, description: Optional. }
+              - name: facts
+                label: Facts (label and value)
+                description: "Optional. Like: When / Tuesdays, 10:00 to 11:30 AM"
+                type: object
+                list: true
+                fields:
+                  - { name: label, label: Label, type: string, required: true }
+                  - { name: value, label: Value, type: string, required: true }
+              - name: bullets
+                label: Bullet list
+                description: Optional. The bold part is optional too.
+                type: object
+                list: true
+                fields:
+                  - { name: bold, label: Bold start, type: string }
+                  - { name: text, label: Text, type: string, required: true }
+              - name: chips
+                label: Pill list
+                description: Optional. Leave the list empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Heading, type: string }
+                  - { name: list, label: Pills, type: string, list: true }
+              - name: note
+                label: Highlighted note
+                description: Optional. Leave the text empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Bold start, type: string }
+                  - { name: text, label: Text, type: text }
+              - name: button
+                label: Link at the bottom
+                description: Optional. Leave the words empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Words, type: string }
+                  - name: to
+                    label: Goes to
+                    type: select
+                    options:
+                      values:
+                        - { name: text, label: "Text us (347-327-8166)" }
+                        - { name: call, label: "Call us (718-889-1374)" }
+                        - { name: instagram, label: "Instagram" }
+                        - { name: contact, label: "Contact page" }
+                        - { name: work, label: "Photos further down this page" }
+              - { name: wide, label: Full width, type: boolean }
+          - { name: note, label: Small note under the cards, type: text, description: Optional. }
+      - name: photo
+        label: Floating photo next to the heading
+        type: object
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+          - name: alt
+            label: Describe the photo
+            description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+            type: string
+            required: true
+      - name: gallery
+        label: Photo gallery
+        type: object
+        list: { min: 3, max: 12 }
+        fields:
+          - { name: image, label: Photo, type: image, required: true }
+          - { name: alt, label: Describe the photo, type: string, required: true }
+
+  - name: art-classes
+    label: "Creative Arts page"
+    type: file
+    path: content/pages/art-classes.json
+    format: json
+    fields:
+      - { name: title, label: Page name, type: string, required: true, description: Shows in the browser tab, search results and the Next link. }
+      - { name: heading, label: Big heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - { name: description, label: Search description, type: text, required: true, description: What Google shows under the page name. One or two sentences. }
+      - { name: intro, label: Intro under the heading, type: text, required: true }
+      - name: buttons
+        label: Top buttons
+        type: object
+        list: { min: 1, max: 2 }
+        fields:
+          - { name: label, label: Words, type: string, required: true }
+          - name: to
+            label: Goes to
+            type: select
+            options:
+              values:
+                - { name: text, label: "Text us (347-327-8166)" }
+                - { name: call, label: "Call us (718-889-1374)" }
+                - { name: instagram, label: "Instagram" }
+                - { name: contact, label: "Contact page" }
+                - { name: work, label: "Photos further down this page" }
+      - { name: statement, label: Big statement line, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - name: sections
+        label: Sections
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
+        fields:
+          - { name: heading, label: Section heading, type: string, description: "Optional. Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+          - { name: intro, label: Section intro, type: text, description: Optional. }
+          - { name: ribbon, label: Scrolling ribbon words, type: string, list: true, description: Optional. }
+          - name: cards
+            label: Cards
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - { name: tag, label: Small label on top, type: string, required: true, description: "Like: 3 hours · Full venue" }
+              - { name: title, label: Card title, type: string, required: true }
+              - { name: subtitle, label: Line under the title, type: string, required: true }
+              - { name: text, label: Paragraph, type: text, description: Optional. }
+              - name: facts
+                label: Facts (label and value)
+                description: "Optional. Like: When / Tuesdays, 10:00 to 11:30 AM"
+                type: object
+                list: true
+                fields:
+                  - { name: label, label: Label, type: string, required: true }
+                  - { name: value, label: Value, type: string, required: true }
+              - name: bullets
+                label: Bullet list
+                description: Optional. The bold part is optional too.
+                type: object
+                list: true
+                fields:
+                  - { name: bold, label: Bold start, type: string }
+                  - { name: text, label: Text, type: string, required: true }
+              - name: chips
+                label: Pill list
+                description: Optional. Leave the list empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Heading, type: string }
+                  - { name: list, label: Pills, type: string, list: true }
+              - name: note
+                label: Highlighted note
+                description: Optional. Leave the text empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Bold start, type: string }
+                  - { name: text, label: Text, type: text }
+              - name: button
+                label: Link at the bottom
+                description: Optional. Leave the words empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Words, type: string }
+                  - name: to
+                    label: Goes to
+                    type: select
+                    options:
+                      values:
+                        - { name: text, label: "Text us (347-327-8166)" }
+                        - { name: call, label: "Call us (718-889-1374)" }
+                        - { name: instagram, label: "Instagram" }
+                        - { name: contact, label: "Contact page" }
+                        - { name: work, label: "Photos further down this page" }
+              - { name: wide, label: Full width, type: boolean }
+          - { name: note, label: Small note under the cards, type: text, description: Optional. }
+      - name: photo
+        label: Floating photo next to the heading
+        type: object
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+          - name: alt
+            label: Describe the photo
+            description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+            type: string
+            required: true
+      - name: gallery
+        label: Photo gallery
+        type: object
+        list: { min: 3, max: 12 }
+        fields:
+          - { name: image, label: Photo, type: image, required: true }
+          - { name: alt, label: Describe the photo, type: string, required: true }
+
+  - name: special-events
+    label: "Special Events page"
+    type: file
+    path: content/pages/special-events.json
+    format: json
+    fields:
+      - { name: title, label: Page name, type: string, required: true, description: Shows in the browser tab, search results and the Next link. }
+      - { name: heading, label: Big heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - { name: description, label: Search description, type: text, required: true, description: What Google shows under the page name. One or two sentences. }
+      - { name: intro, label: Intro under the heading, type: text, required: true }
+      - name: buttons
+        label: Top buttons
+        type: object
+        list: { min: 1, max: 2 }
+        fields:
+          - { name: label, label: Words, type: string, required: true }
+          - name: to
+            label: Goes to
+            type: select
+            options:
+              values:
+                - { name: text, label: "Text us (347-327-8166)" }
+                - { name: call, label: "Call us (718-889-1374)" }
+                - { name: instagram, label: "Instagram" }
+                - { name: contact, label: "Contact page" }
+                - { name: work, label: "Photos further down this page" }
+      - { name: statement, label: Big statement line, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - name: sections
+        label: Sections
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
+        fields:
+          - { name: heading, label: Section heading, type: string, description: "Optional. Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+          - { name: intro, label: Section intro, type: text, description: Optional. }
+          - { name: ribbon, label: Scrolling ribbon words, type: string, list: true, description: Optional. }
+          - name: cards
+            label: Cards
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - { name: tag, label: Small label on top, type: string, required: true, description: "Like: 3 hours · Full venue" }
+              - { name: title, label: Card title, type: string, required: true }
+              - { name: subtitle, label: Line under the title, type: string, required: true }
+              - { name: text, label: Paragraph, type: text, description: Optional. }
+              - name: facts
+                label: Facts (label and value)
+                description: "Optional. Like: When / Tuesdays, 10:00 to 11:30 AM"
+                type: object
+                list: true
+                fields:
+                  - { name: label, label: Label, type: string, required: true }
+                  - { name: value, label: Value, type: string, required: true }
+              - name: bullets
+                label: Bullet list
+                description: Optional. The bold part is optional too.
+                type: object
+                list: true
+                fields:
+                  - { name: bold, label: Bold start, type: string }
+                  - { name: text, label: Text, type: string, required: true }
+              - name: chips
+                label: Pill list
+                description: Optional. Leave the list empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Heading, type: string }
+                  - { name: list, label: Pills, type: string, list: true }
+              - name: note
+                label: Highlighted note
+                description: Optional. Leave the text empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Bold start, type: string }
+                  - { name: text, label: Text, type: text }
+              - name: button
+                label: Link at the bottom
+                description: Optional. Leave the words empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Words, type: string }
+                  - name: to
+                    label: Goes to
+                    type: select
+                    options:
+                      values:
+                        - { name: text, label: "Text us (347-327-8166)" }
+                        - { name: call, label: "Call us (718-889-1374)" }
+                        - { name: instagram, label: "Instagram" }
+                        - { name: contact, label: "Contact page" }
+                        - { name: work, label: "Photos further down this page" }
+              - { name: wide, label: Full width, type: boolean }
+          - { name: note, label: Small note under the cards, type: text, description: Optional. }
+      - name: photo
+        label: Floating photo next to the heading
+        type: object
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+          - name: alt
+            label: Describe the photo
+            description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+            type: string
+            required: true
+      - name: gallery
+        label: Photo gallery
+        type: object
+        list: { min: 3, max: 12 }
+        fields:
+          - { name: image, label: Photo, type: image, required: true }
+          - { name: alt, label: Describe the photo, type: string, required: true }
+
+  - name: balloons-backdrops
+    label: "GO OLV page"
+    type: file
+    path: content/pages/balloons-backdrops.json
+    format: json
+    fields:
+      - { name: title, label: Page name, type: string, required: true, description: Shows in the browser tab, search results and the Next link. }
+      - { name: heading, label: Big heading, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - { name: description, label: Search description, type: text, required: true, description: What Google shows under the page name. One or two sentences. }
+      - { name: intro, label: Intro under the heading, type: text, required: true }
+      - name: buttons
+        label: Top buttons
+        type: object
+        list: { min: 1, max: 2 }
+        fields:
+          - { name: label, label: Words, type: string, required: true }
+          - name: to
+            label: Goes to
+            type: select
+            options:
+              values:
+                - { name: text, label: "Text us (347-327-8166)" }
+                - { name: call, label: "Call us (718-889-1374)" }
+                - { name: instagram, label: "Instagram" }
+                - { name: contact, label: "Contact page" }
+                - { name: work, label: "Photos further down this page" }
+      - { name: statement, label: Big statement line, type: string, required: true, description: "Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+      - name: sections
+        label: Sections
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
+        fields:
+          - { name: heading, label: Section heading, type: string, description: "Optional. Put *stars* around words to show them in the fancy accent style, like: Birthday *Parties*" }
+          - { name: intro, label: Section intro, type: text, description: Optional. }
+          - { name: ribbon, label: Scrolling ribbon words, type: string, list: true, description: Optional. }
+          - name: cards
+            label: Cards
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - { name: tag, label: Small label on top, type: string, required: true, description: "Like: 3 hours · Full venue" }
+              - { name: title, label: Card title, type: string, required: true }
+              - { name: subtitle, label: Line under the title, type: string, required: true }
+              - { name: text, label: Paragraph, type: text, description: Optional. }
+              - name: facts
+                label: Facts (label and value)
+                description: "Optional. Like: When / Tuesdays, 10:00 to 11:30 AM"
+                type: object
+                list: true
+                fields:
+                  - { name: label, label: Label, type: string, required: true }
+                  - { name: value, label: Value, type: string, required: true }
+              - name: bullets
+                label: Bullet list
+                description: Optional. The bold part is optional too.
+                type: object
+                list: true
+                fields:
+                  - { name: bold, label: Bold start, type: string }
+                  - { name: text, label: Text, type: string, required: true }
+              - name: chips
+                label: Pill list
+                description: Optional. Leave the list empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Heading, type: string }
+                  - { name: list, label: Pills, type: string, list: true }
+              - name: note
+                label: Highlighted note
+                description: Optional. Leave the text empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Bold start, type: string }
+                  - { name: text, label: Text, type: text }
+              - name: button
+                label: Link at the bottom
+                description: Optional. Leave the words empty to hide it.
+                type: object
+                fields:
+                  - { name: label, label: Words, type: string }
+                  - name: to
+                    label: Goes to
+                    type: select
+                    options:
+                      values:
+                        - { name: text, label: "Text us (347-327-8166)" }
+                        - { name: call, label: "Call us (718-889-1374)" }
+                        - { name: instagram, label: "Instagram" }
+                        - { name: contact, label: "Contact page" }
+                        - { name: work, label: "Photos further down this page" }
+              - { name: wide, label: Full width, type: boolean }
+          - { name: note, label: Small note under the cards, type: text, description: Optional. }
+      - name: photo
+        label: Floating photo next to the heading
+        type: object
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+          - name: alt
+            label: Describe the photo
+            description: For people using screen readers. One short sentence, like "Pink balloon arch over a dessert table".
+            type: string
+            required: true
+      - name: gallery
+        label: Photo gallery
+        type: object
+        list: { min: 3, max: 12 }
+        fields:
+          - { name: image, label: Photo, type: image, required: true }
+          - { name: alt, label: Describe the photo, type: string, required: true }

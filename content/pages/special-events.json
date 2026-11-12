@@ -1,0 +1,158 @@
+{
+  "title": "Special Public Events",
+  "heading": "Special *Events*",
+  "description": "Ticketed public community events at Our Little Village in Staten Island: holiday celebrations, egg hunts, Moms' Night Out and Sip & Paints.",
+  "intro": "Big magic, themed fun and lasting memories. Ticketed community events all year long.",
+  "buttons": [
+    {
+      "label": "Text for tickets",
+      "to": "text"
+    },
+    {
+      "label": "See what's on",
+      "to": "instagram"
+    }
+  ],
+  "statement": "See you at *the Village!*",
+  "sections": [
+    {
+      "heading": "",
+      "intro": "",
+      "ribbon": [],
+      "cards": [
+        {
+          "tag": "Kids & families",
+          "title": "Family Events",
+          "subtitle": "From big holidays to the little ones, like Mother's Day and Father's Day",
+          "text": "We often invite special guest vendors and unique experiences to make every celebration bigger.",
+          "facts": [],
+          "bullets": [
+            {
+              "bold": "High-energy activities",
+              "text": "Party games, scavenger hunts and sensory stations"
+            },
+            {
+              "bold": "Holiday highlights",
+              "text": "The Great Egg Hunt, indoor snowball fights and festive crafts"
+            },
+            {
+              "bold": "Picture-perfect moments",
+              "text": "Custom balloon installations and immersive backdrops"
+            },
+            {
+              "bold": "Special guests",
+              "text": "Visits from favorite heroes, princesses and holiday icons"
+            }
+          ],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "",
+            "to": "text"
+          },
+          "wide": false
+        },
+        {
+          "tag": "Grown-ups",
+          "title": "Adult Celebrations & Socials",
+          "subtitle": "A stylish oasis to socialize, unwind and connect",
+          "text": "Look out for public community socials like Moms' Night Out and creative Sip & Paints with talented guest hosts.",
+          "facts": [],
+          "bullets": [],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "Ask about hosting your own",
+            "to": "text"
+          },
+          "wide": false
+        }
+      ],
+      "note": ""
+    },
+    {
+      "heading": "Booking & *policies.*",
+      "intro": "",
+      "ribbon": [],
+      "cards": [
+        {
+          "tag": "Good to know",
+          "title": "How tickets work",
+          "subtitle": "Public events have limited capacity and sell out fast",
+          "text": "",
+          "facts": [],
+          "bullets": [
+            {
+              "bold": "How to book",
+              "text": "All advance tickets are booked by text at 347-327-8166"
+            },
+            {
+              "bold": "Payment",
+              "text": "Zelle, Venmo and all major credit cards"
+            },
+            {
+              "bold": "Firm policy",
+              "text": "Due to high demand and limited space, public event tickets are non-refundable"
+            },
+            {
+              "bold": "Stay updated",
+              "text": "Dates and ticket releases go up on Instagram first"
+            }
+          ],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "Text for tickets",
+            "to": "text"
+          },
+          "wide": true
+        }
+      ],
+      "note": ""
+    }
+  ],
+  "photo": {
+    "image": "/assets/work/special-b.jpg",
+    "alt": "Giant wine glass display with a balloon garland"
+  },
+  "gallery": [
+    {
+      "image": "/assets/work/special-a.jpg",
+      "alt": "Glitter guitar display with balloons"
+    },
+    {
+      "image": "/assets/work/special-c.jpg",
+      "alt": "Pumpkin and potion Halloween display"
+    },
+    {
+      "image": "/assets/work/special-b.jpg",
+      "alt": "Wine glass display with a burgundy and gold garland"
+    },
+    {
+      "image": "/assets/work/special-d.jpg",
+      "alt": "Holiday table with red and white stripes"
+    },
+    {
+      "image": "/assets/work/special-e.jpg",
+      "alt": "Rock-themed guitar backdrop"
+    }
+  ]
+}

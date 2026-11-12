@@ -1,0 +1,140 @@
+{
+  "title": "Birthday Parties",
+  "heading": "Birthday *Parties*",
+  "description": "Private luxury 3-hour birthday packages and budget-friendly kids play packages in Staten Island, with custom decor and immersive backdrops.",
+  "intro": "Two ways to celebrate: a luxury three-hour party with the whole venue, or a play-packed party built around the kids.",
+  "buttons": [
+    {
+      "label": "Plan your party",
+      "to": "contact"
+    },
+    {
+      "label": "See our work",
+      "to": "work"
+    }
+  ],
+  "statement": "Stop hosting. *Start celebrating.*",
+  "sections": [
+    {
+      "heading": "Pick your *path.*",
+      "intro": "",
+      "ribbon": [],
+      "cards": [
+        {
+          "tag": "3 hours · Full venue",
+          "title": "Private Luxury Packages",
+          "subtitle": "Designed for ultimate comfort and social connection",
+          "text": "",
+          "facts": [],
+          "bullets": [
+            {
+              "bold": "",
+              "text": "Full venue access"
+            },
+            {
+              "bold": "",
+              "text": "High-end custom decor"
+            },
+            {
+              "bold": "",
+              "text": "An elegant adult lounge with a modern fireplace"
+            },
+            {
+              "bold": "",
+              "text": "A fresh coffee bar"
+            },
+            {
+              "bold": "",
+              "text": "Black-light play for the kids"
+            }
+          ],
+          "chips": {
+            "label": "Available tiers",
+            "list": [
+              "Traditional with a Contemporary Twist",
+              "The Mini Theme",
+              "Signature OLV Experience"
+            ]
+          },
+          "note": {
+            "label": "Exclusive upgrade",
+            "text": "Ask about The Magic Step-In Experience: interactive, multi-leveled immersive backdrops where children step inside the theme, so you can capture beautiful, candid moments."
+          },
+          "button": {
+            "label": "",
+            "to": "text"
+          },
+          "wide": false
+        },
+        {
+          "tag": "Budget-friendly",
+          "title": "Kids Play Packages",
+          "subtitle": "Non-stop active play and core childhood memories",
+          "text": "",
+          "facts": [],
+          "bullets": [
+            {
+              "bold": "",
+              "text": "Customized choice tableware"
+            },
+            {
+              "bold": "",
+              "text": "Delicious pizza"
+            },
+            {
+              "bold": "",
+              "text": "Self-service refreshments for your adult guests"
+            }
+          ],
+          "chips": {
+            "label": "Available tiers",
+            "list": [
+              "The Kids Party Package",
+              "The Touch of Magic Upgrade Bundle"
+            ]
+          },
+          "note": {
+            "label": "Touch of Magic Bundle",
+            "text": "An upgraded premium tablescape plus our trending Balloonless Backdrop: large themed cutouts with subtle balloon accents for a crisp, modern look."
+          },
+          "button": {
+            "label": "",
+            "to": "text"
+          },
+          "wide": false
+        }
+      ],
+      "note": ""
+    }
+  ],
+  "photo": {
+    "image": "/assets/work/parties-a.jpg",
+    "alt": "Strawberry-themed birthday centerpiece"
+  },
+  "gallery": [
+    {
+      "image": "/assets/work/parties-c.jpg",
+      "alt": "Tea party balloon backdrop with a neon Happy Birthday sign"
+    },
+    {
+      "image": "/assets/work/parties-a.jpg",
+      "alt": "Strawberry birthday centerpiece on a pink table"
+    },
+    {
+      "image": "/assets/work/parties-d.jpg",
+      "alt": "Red balloon garland over a wall of hearts"
+    },
+    {
+      "image": "/assets/work/parties-b.jpg",
+      "alt": "Teacup centerpiece with spring flowers"
+    },
+    {
+      "image": "/assets/work/balloons-d.jpg",
+      "alt": "Close-up of a strawberry balloon display"
+    },
+    {
+      "image": "/assets/work/private-c.jpg",
+      "alt": "Stacked teacup tower surrounded by pastel balloons"
+    }
+  ]
+}

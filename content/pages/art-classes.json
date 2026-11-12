@@ -1,0 +1,229 @@
+{
+  "title": "Creative Arts",
+  "heading": "Creative *Arts*",
+  "description": "OLV Artists fine art classes for kids, teens and adults in Staten Island: Little Artists, Jr. Artists and 1:1 portfolio prep.",
+  "intro": "Fine art sessions for kids, teens and adults. We bypass basic crafts for genuine studio techniques.",
+  "buttons": [
+    {
+      "label": "Ask about classes",
+      "to": "text"
+    },
+    {
+      "label": "See our work",
+      "to": "work"
+    }
+  ],
+  "statement": "Real studio. *Real art.*",
+  "sections": [
+    {
+      "heading": "The OLV Artists *curriculum.*",
+      "intro": "Hands-on experimentation with classic materials, building technical skill through long-term, meaningful projects.",
+      "ribbon": [
+        "Relief printmaking",
+        "Plaster molding",
+        "Acrylic painting",
+        "Structural sketching",
+        "Mixed-media design"
+      ],
+      "cards": [
+        {
+          "tag": "All year",
+          "title": "How it works",
+          "subtitle": "Programs run through the academic year",
+          "text": "",
+          "facts": [],
+          "bullets": [
+            {
+              "bold": "Session blocks",
+              "text": "Structured in 6-to-8-week blocks"
+            },
+            {
+              "bold": "Gallery exhibition",
+              "text": "Every quarter ends with a showcase for families"
+            },
+            {
+              "bold": "Milestones",
+              "text": "Achievement certificates each quarter, plus collectible patches every semester for your OLV Artist Apron"
+            },
+            {
+              "bold": "Private groups",
+              "text": "Tailored sessions for individual painters or friend groups. Text us to arrange yours."
+            }
+          ],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "",
+            "to": "text"
+          },
+          "wide": true
+        }
+      ],
+      "note": ""
+    },
+    {
+      "heading": "Featured *classes.*",
+      "intro": "",
+      "ribbon": [],
+      "cards": [
+        {
+          "tag": "Ages 3+",
+          "title": "Little Artists",
+          "subtitle": "Rich tactile projects plus energetic play",
+          "text": "",
+          "facts": [
+            {
+              "label": "When",
+              "value": "Mondays, 4:30 to 5:30 PM"
+            },
+            {
+              "label": "Included",
+              "value": "15 minutes of early free play and active breaks in our private Play Room"
+            }
+          ],
+          "bullets": [],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "",
+            "to": "text"
+          },
+          "wide": false
+        },
+        {
+          "tag": "Ages 6+",
+          "title": "Jr. Artists",
+          "subtitle": "For maturing creators refining technical skills",
+          "text": "",
+          "facts": [
+            {
+              "label": "When",
+              "value": "Wednesdays, 5:30 to 6:30 PM"
+            },
+            {
+              "label": "Included",
+              "value": "Movement breaks in the Play Room between focused studio work on personal portfolios"
+            }
+          ],
+          "bullets": [],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "",
+            "to": "text"
+          },
+          "wide": false
+        },
+        {
+          "tag": "By request",
+          "title": "1:1 Portfolio Prep",
+          "subtitle": "For specialized art schools, high school placements and college admissions",
+          "text": "",
+          "facts": [],
+          "bullets": [
+            {
+              "bold": "",
+              "text": "A personalized project plan built around your student's admission requirements"
+            },
+            {
+              "bold": "",
+              "text": "Help compiling, curating and reviewing the whole portfolio"
+            },
+            {
+              "bold": "",
+              "text": "Final layout presentation and expert mounting of the artwork"
+            }
+          ],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "Text to schedule",
+            "to": "text"
+          },
+          "wide": false
+        },
+        {
+          "tag": "Tuition",
+          "title": "Tuition & Registration",
+          "subtitle": "Little Artists and Jr. Artists",
+          "text": "",
+          "facts": [
+            {
+              "label": "Monthly tuition",
+              "value": "Estimated at $125 per month"
+            },
+            {
+              "label": "Registration",
+              "value": "$50 initial registration and supply fee, including your child's custom OLV Artist Apron"
+            }
+          ],
+          "bullets": [],
+          "chips": {
+            "label": "",
+            "list": []
+          },
+          "note": {
+            "label": "",
+            "text": ""
+          },
+          "button": {
+            "label": "Text to register",
+            "to": "text"
+          },
+          "wide": false
+        }
+      ],
+      "note": ""
+    }
+  ],
+  "photo": {
+    "image": "/assets/work/art-a.jpg",
+    "alt": "Handmade colorful mosaic plate"
+  },
+  "gallery": [
+    {
+      "image": "/assets/work/art-a.jpg",
+      "alt": "Handmade colorful mosaic plate"
+    },
+    {
+      "image": "/assets/work/art-d.jpg",
+      "alt": "Textured snowman craft"
+    },
+    {
+      "image": "/assets/work/art-b.jpg",
+      "alt": "Hand squeezing red paint onto a palette"
+    },
+    {
+      "image": "/assets/work/art-c.jpg",
+      "alt": "Purple craft table set with cone hats"
+    },
+    {
+      "image": "/assets/work/art-e.jpg",
+      "alt": "Finished snowman crafts"
+    }
+  ]
+}
