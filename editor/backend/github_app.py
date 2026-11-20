@@ -1,9 +1,9 @@
 """Server-only, single-repository GitHub App adapter. No PAT or OAuth fallback."""
-import base64, hashlib, json, os, re, subprocess, time
+import base64, certifi, hashlib, json, os, re, ssl, subprocess, time
 from pathlib import Path
 from urllib.error import HTTPError
 from urllib.parse import urlencode, urlsplit
-from urllib.request import Request, build_opener, HTTPRedirectHandler
+from urllib.request import Request, build_opener, HTTPRedirectHandler, HTTPSHandler
 from .policy import Invalid, Conflict
 
 REPOSITORY='RosarioNoel-FS/our-little-village'
@@ -19,7 +19,7 @@ def http(method,path,token,body=None,raw=False):
     data=json.dumps(body).encode() if body is not None else None
     req=Request('https://api.github.com'+path,data=data,method=method,headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json','X-GitHub-Api-Version':'2026-03-10','User-Agent':'OLV-Staff-Editor'})
     try:
-        with build_opener(NoRedirect).open(req,timeout=30) as response:
+        with build_opener(NoRedirect,HTTPSHandler(context=ssl.create_default_context(cafile=os.environ.get('SSL_CERT_FILE') or certifi.where()))).open(req,timeout=30) as response:
             result=response.read(200*1024*1024+1 if raw else 15*1024*1024+1)
             if len(result)>(200 if raw else 15)*1024*1024:raise Invalid('GitHub response exceeds the allowed size.')
             return result if raw else json.loads(result)
@@ -28,7 +28,7 @@ def http(method,path,token,body=None,raw=False):
             location=e.headers.get('Location','');u=urlsplit(location)
             # Signed artifact redirect: no GitHub authorization header ever leaves api.github.com.
             if u.scheme!='https' or not any(u.hostname and u.hostname.endswith(suffix) for suffix in ('.blob.core.windows.net','.actions.githubusercontent.com','.githubusercontent.com')):raise Invalid('Unexpected artifact download destination.')
-            with build_opener(NoRedirect).open(Request(location,headers={'User-Agent':'OLV-Staff-Editor'}),timeout=60) as r:
+            with build_opener(NoRedirect,HTTPSHandler(context=ssl.create_default_context(cafile=os.environ.get('SSL_CERT_FILE') or certifi.where()))).open(Request(location,headers={'User-Agent':'OLV-Staff-Editor'}),timeout=60) as r:
                 data=r.read(200*1024*1024+1)
                 if len(data)>200*1024*1024:raise Invalid('Build artifact is too large.')
                 return data
@@ -106,5 +106,5 @@ class GitHubApp:
         if len(matches)!=1:return {'state':'failed','message':'The verified staging build artifact is missing or expired.'}
         artifact=matches[0];raw=self.api('GET',f'/actions/artifacts/{int(artifact["id"])}/zip',raw=True)
         expected=artifact.get('digest')
-        if expected and expected!='sha256:'+hashlib.sha256(raw).hexdigest():raise Invalid('The staging build artifact checksum did not match.')
+        if not expected or expected!='sha256:'+hashlib.sha256(raw).hexdigest():raise Invalid('The staging build artifact checksum did not match.')
         return {'state':'built','artifact':raw,'message':'Verified staging build completed.'}

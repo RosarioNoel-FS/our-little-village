@@ -192,6 +192,27 @@ class GitHubAdapterTests(unittest.TestCase):
         self.assertTrue(all('/repos/' not in c[1] or c[1].startswith('/repos/'+REPOSITORY+'/') for c in self.calls))
         with self.assertRaises(Conflict):self.app.commit('a'*40,{'content/home.json':b'{}'})
         with self.assertRaises(Invalid):self.app.commit(self.head,{'.github/workflows/evil.yml':b'evil'})
+    def test_remote_snapshot_revision_does_not_follow_a_newer_head(self):
+        import re
+        from editor.backend.publishing import CONTENT
+        class Remote:
+            def __init__(self):self.calls=0
+            def head(self):self.calls+=1;return 'a'*40 if self.calls==1 else 'b'*40
+            def read_files(self,revision,paths):
+                assert revision=='a'*40
+                return {p:(ROOT/p).read_bytes() for p in paths}
+            def tree(self,revision):
+                result=[]
+                for p in (ROOT/'assets/work').iterdir():
+                    if re.fullmatch(r'[\w.-]+\.(jpe?g|png|webp|mp4|webm)',p.name,re.I):
+                        data=p.read_bytes();result.append({'path':'assets/work/'+p.name,'mode':'100644','type':'blob','size':len(data),'sha':hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()})
+                return result
+            def commit(self,*args):raise AssertionError('A newer remote head must not be overwritten.')
+        remote=Remote();app=App(state=Path(self.tmp.name)/'remote-state',mode='github-staging',github=remote)
+        self.assertEqual(app.publisher.revision,'a'*40)
+        token,user=account(app.auth,'remote@example.invalid')
+        job=app.publisher.submit(user,draft(app,{'parties|/heading':'Safe *change*'}));result=wait_job(app,job['id'])
+        self.assertEqual(result['state'],'conflict')
     def test_real_rsa_jwt_signature_and_private_key_permissions(self):
         key=Path(self.tmp.name)/'rsa.pem';public=Path(self.tmp.name)/'rsa.pub'
         subprocess.run(['openssl','genpkey','-algorithm','RSA','-pkeyopt','rsa_keygen_bits:2048','-out',str(key)],check=True,capture_output=True)

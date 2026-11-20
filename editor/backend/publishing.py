@@ -83,7 +83,7 @@ class Publisher:
         p=self.state/'active.json'
         return json.loads(p.read_text())['revision'] if p.exists() else None
     def refresh(self):
-        self.revision=git(self.repo,'rev-parse','HEAD') if self.mode=='local-staging' else self.github.head()
+        self.revision=git(self.repo,'rev-parse','HEAD') if self.mode=='local-staging' else self.remote_revision
         self.boot=prepare(self.repo,self.state/'preview')
     def sync_github(self):
         # Seed trusted renderer/assets from the reviewed source bundle. Only remote JSON is read as content.
@@ -91,15 +91,20 @@ class Publisher:
         revision=self.github.head();files=self.github.read_files(revision,CONTENT)
         for name,data in files.items():(self.repo/name).write_bytes(data)
         # Download only flat approved media blobs with bounded sizes, never remote executable templates.
+        seen_media=set()
         for entry in self.github.tree(revision):
             path=entry.get('path','')
             if re.fullmatch(r'assets/work/[\w.-]+\.(jpe?g|png|webp|mp4|webm)',path,re.I):
+                seen_media.add(path)
                 if entry.get('mode')!='100644' or entry.get('type')!='blob' or entry.get('size',0)>20*1024*1024:raise Invalid('Invalid staging media tree entry.')
                 dest=self.repo/path
                 if dest.exists() and hashlib.sha1(b'blob '+str(dest.stat().st_size).encode()+b'\0'+dest.read_bytes()).hexdigest()==entry['sha']:continue
                 blob=self.github.api('GET','/git/blobs/'+entry['sha']);data=__import__('base64').b64decode(blob['content'])
                 if len(data)>20*1024*1024:raise Invalid('Remote media exceeds limits.')
                 dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(data)
+        for cached in (self.repo/'assets/work').iterdir():
+            if re.fullmatch(r'[\w.-]+\.(jpe?g|png|webp|mp4|webm)',cached.name,re.I) and 'assets/work/'+cached.name not in seen_media:cached.unlink()
+        self.remote_revision=revision
     def job(self,id):
         with self.auth.db() as db:row=db.execute('SELECT data FROM jobs WHERE id=?',(id,)).fetchone()
         if not row:raise Invalid('Staging operation not found.')

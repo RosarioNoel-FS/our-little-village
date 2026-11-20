@@ -8,6 +8,7 @@ on:
       - assets/work/**
       - assets/video-sources.js
       - cms/**
+      - editor/**
       - .github/workflows/visual-cms-staging.yml
 permissions:
   contents: read

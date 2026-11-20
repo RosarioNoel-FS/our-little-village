@@ -111,7 +111,7 @@ class App:
                 if not active:return self.response(start,503,{'error':'No verified staging build is available yet.'})
                 file=self.publisher.releases/active/relative
                 if file.suffix=='.html' and file.is_file():
-                    text=file.read_text().replace('<head>','<head><base href="/staging/">',1)
+                    text=file.read_text().replace('<head>','<head><base href="/staging/'+html.escape(relative,quote=True)+'">',1)
                     text=text.replace('<body','<body',1).replace('</body>','<div style="position:fixed;top:0;left:0;right:0;z-index:2147483647;background:#482477;color:white;text-align:center;padding:9px;font:14px system-ui">Our Little Village staging · not the live website</div></body>')
                     return self.response(start,200,text,'text/html')
                 return self.static(start,file)
