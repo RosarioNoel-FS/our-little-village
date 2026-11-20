@@ -75,7 +75,7 @@ GitHub HTTPS uses a current pinned CA certificate bundle with verification enabl
 - [staging.env.example](deploy/staging.env.example): server-only configuration names; no secrets.
 - Root `.dockerignore` excludes state, databases, `.env` files, PEM keys, Git metadata and preview scratch files.
 
-Build the container from this repository root, supply a private writable volume for `/var/lib/olv`, mount the App key read-only, and keep the container's HTTP port behind the HTTPS proxy. Use one Gunicorn worker with threads as supplied; publishing also has an interprocess file lock. No shared/public hosting was configured during implementation. The Docker/reverse-proxy artifacts have not been deployed or tested against an external hosting provider.
+Build the container from this repository root, supply a private writable volume for `/var/lib/olv`, mount the App key read-only, and keep the container's HTTP port behind the HTTPS proxy. The supplied Gunicorn command disables its unneeded control socket. Use one Gunicorn worker with threads as supplied; publishing also has an interprocess file lock. No shared/public hosting was configured during implementation. The Docker/reverse-proxy artifacts have not been deployed or tested against an external hosting provider.
 
 The hosting administrator must provision TLS, persistent encrypted storage/backups and the dedicated hostname. Retain release snapshots according to the owner's storage/restore policy; this version does not silently delete history. The hosting service must allow the GitHub API and signed artifact-download domains. No additional broad app connection is required for staff.
 

@@ -7,4 +7,4 @@ COPY --chown=olv:olv . /app
 USER olv
 ENV OLV_STATE_DIR=/var/lib/olv
 EXPOSE 8080
-CMD ["gunicorn", "editor.backend.wsgi:application", "--bind", "0.0.0.0:8080", "--workers", "1", "--threads", "4", "--timeout", "180", "--access-logfile", "-", "--error-logfile", "-"]
+CMD ["gunicorn", "editor.backend.wsgi:application", "--bind", "0.0.0.0:8080", "--no-control-socket", "--workers", "1", "--threads", "4", "--timeout", "180", "--access-logfile", "-", "--error-logfile", "-"]
