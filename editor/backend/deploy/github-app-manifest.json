@@ -1,0 +1,8 @@
+{
+  "name": "Our Little Village Staff Editor",
+  "url": "https://ourlittlevillage.com",
+  "public": false,
+  "hook_attributes": {"active": false},
+  "default_permissions": {"contents": "write", "actions": "read", "metadata": "read"},
+  "default_events": []
+}

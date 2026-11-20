@@ -1,0 +1,52 @@
+# This workflow NEVER requests GitHub Pages publishing or writes to the repository.
+name: Build protected visual CMS staging
+on:
+  push:
+    branches: [staging/visual-cms]
+    paths:
+      - content/**
+      - assets/work/**
+      - assets/video-sources.js
+      - cms/**
+      - .github/workflows/visual-cms-staging.yml
+permissions:
+  contents: read
+concurrency:
+  group: olv-visual-cms-staging
+  cancel-in-progress: false
+jobs:
+  staging:
+    if: github.repository == 'RosarioNoel-FS/our-little-village' && github.ref == 'refs/heads/staging/visual-cms'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.12'
+      - run: pip install Pillow==13.0.0
+      - run: python3 cms/optimize.py assets/work
+      - run: python3 cms/build.py
+      - name: Package exact staging revision
+        env:
+          OLV_BUILD_REVISION: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import json, os, shutil
+          from pathlib import Path
+          out=Path('_staging');out.mkdir()
+          for folder in ['assets','content']:
+              shutil.copytree(folder,out/folder)
+          for name in ['index.html','parties.html','private-events.html','toddler-classes.html','art-classes.html','special-events.html','balloons-backdrops.html','contact.html','privacy.html','favicon.png','apple-touch-icon.png','robots.txt','sitemap.xml']:
+              if Path(name).is_file():shutil.copy2(name,out/name)
+          (out/'olv-build.json').write_text(json.dumps({'revision':os.environ['OLV_BUILD_REVISION'],'repository':'RosarioNoel-FS/our-little-village','branch':'staging/visual-cms'}))
+          PY
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: olv-staging-${{ github.sha }}
+          path: _staging/
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0

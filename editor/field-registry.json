@@ -1,0 +1,3266 @@
+{
+  "version": 1,
+  "baseHash": "9f990061107f93173b7ac6336301421eff82d1528c04a02a4de6e7d09b877293",
+  "pages": {
+    "home": {
+      "source": "content/home.json",
+      "fields": [
+        {
+          "path": "/heading",
+          "label": "Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/intro",
+          "label": "Introduction",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/art/button",
+          "label": "Creative Arts \u00b7 Button words",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/art/heading",
+          "label": "Creative Arts \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/art/photo_1/alt",
+          "label": "Creative Arts \u00b7 First photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/art/photo_1/image",
+          "label": "Creative Arts \u00b7 First photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/art/photo_1/alt"
+        },
+        {
+          "path": "/panels/art/photo_2/alt",
+          "label": "Creative Arts \u00b7 Second photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/art/photo_2/image",
+          "label": "Creative Arts \u00b7 Second photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/art/photo_2/alt"
+        },
+        {
+          "path": "/panels/art/text",
+          "label": "Creative Arts \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/art/video",
+          "label": "Creative Arts \u00b7 Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        },
+        {
+          "path": "/panels/balloons/button",
+          "label": "GO OLV \u00b7 Button words",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/balloons/heading",
+          "label": "GO OLV \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/balloons/photo_1/alt",
+          "label": "GO OLV \u00b7 First photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/balloons/photo_1/image",
+          "label": "GO OLV \u00b7 First photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/balloons/photo_1/alt"
+        },
+        {
+          "path": "/panels/balloons/photo_2/alt",
+          "label": "GO OLV \u00b7 Second photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/balloons/photo_2/image",
+          "label": "GO OLV \u00b7 Second photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/balloons/photo_2/alt"
+        },
+        {
+          "path": "/panels/balloons/text",
+          "label": "GO OLV \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/balloons/video",
+          "label": "GO OLV \u00b7 Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        },
+        {
+          "path": "/panels/parties/button",
+          "label": "Birthday Parties \u00b7 Button words",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/parties/heading",
+          "label": "Birthday Parties \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/parties/photo_1/alt",
+          "label": "Birthday Parties \u00b7 First photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/parties/photo_1/image",
+          "label": "Birthday Parties \u00b7 First photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/parties/photo_1/alt"
+        },
+        {
+          "path": "/panels/parties/photo_2/alt",
+          "label": "Birthday Parties \u00b7 Second photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/parties/photo_2/image",
+          "label": "Birthday Parties \u00b7 Second photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/parties/photo_2/alt"
+        },
+        {
+          "path": "/panels/parties/text",
+          "label": "Birthday Parties \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/parties/video",
+          "label": "Birthday Parties \u00b7 Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        },
+        {
+          "path": "/panels/private/button",
+          "label": "Private Events \u00b7 Button words",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/private/heading",
+          "label": "Private Events \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/private/photo_1/alt",
+          "label": "Private Events \u00b7 First photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/private/photo_1/image",
+          "label": "Private Events \u00b7 First photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/private/photo_1/alt"
+        },
+        {
+          "path": "/panels/private/photo_2/alt",
+          "label": "Private Events \u00b7 Second photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/private/photo_2/image",
+          "label": "Private Events \u00b7 Second photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/private/photo_2/alt"
+        },
+        {
+          "path": "/panels/private/text",
+          "label": "Private Events \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/private/video",
+          "label": "Private Events \u00b7 Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        },
+        {
+          "path": "/panels/special/button",
+          "label": "Special Events \u00b7 Button words",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/special/heading",
+          "label": "Special Events \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/special/photo_1/alt",
+          "label": "Special Events \u00b7 First photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/special/photo_1/image",
+          "label": "Special Events \u00b7 First photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/special/photo_1/alt"
+        },
+        {
+          "path": "/panels/special/photo_2/alt",
+          "label": "Special Events \u00b7 Second photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/special/photo_2/image",
+          "label": "Special Events \u00b7 Second photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/special/photo_2/alt"
+        },
+        {
+          "path": "/panels/special/text",
+          "label": "Special Events \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/special/video",
+          "label": "Special Events \u00b7 Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        },
+        {
+          "path": "/panels/toddler/button",
+          "label": "Weekly Classes \u00b7 Button words",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/toddler/heading",
+          "label": "Weekly Classes \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/toddler/photo_1/alt",
+          "label": "Weekly Classes \u00b7 First photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/toddler/photo_1/image",
+          "label": "Weekly Classes \u00b7 First photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/toddler/photo_1/alt"
+        },
+        {
+          "path": "/panels/toddler/photo_2/alt",
+          "label": "Weekly Classes \u00b7 Second photo \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/toddler/photo_2/image",
+          "label": "Weekly Classes \u00b7 Second photo \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/panels/toddler/photo_2/alt"
+        },
+        {
+          "path": "/panels/toddler/text",
+          "label": "Weekly Classes \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/panels/toddler/video",
+          "label": "Weekly Classes \u00b7 Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        }
+      ]
+    },
+    "parties": {
+      "source": "content/pages/parties.json",
+      "fields": [
+        {
+          "path": "/buttons/0/label",
+          "label": "Top button 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/buttons/1/label",
+          "label": "Top button 2 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/alt",
+          "label": "Gallery photo 1 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/image",
+          "label": "Gallery photo 1 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/0/alt"
+        },
+        {
+          "path": "/gallery/1/alt",
+          "label": "Gallery photo 2 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/1/image",
+          "label": "Gallery photo 2 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/1/alt"
+        },
+        {
+          "path": "/gallery/2/alt",
+          "label": "Gallery photo 3 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/2/image",
+          "label": "Gallery photo 3 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/2/alt"
+        },
+        {
+          "path": "/gallery/3/alt",
+          "label": "Gallery photo 4 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/3/image",
+          "label": "Gallery photo 4 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/3/alt"
+        },
+        {
+          "path": "/gallery/4/alt",
+          "label": "Gallery photo 5 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/4/image",
+          "label": "Gallery photo 5 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/4/alt"
+        },
+        {
+          "path": "/gallery/5/alt",
+          "label": "Gallery photo 6 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/5/image",
+          "label": "Gallery photo 6 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/5/alt"
+        },
+        {
+          "path": "/heading",
+          "label": "Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/intro",
+          "label": "Introduction",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/alt",
+          "label": "Featured photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/image",
+          "label": "Featured photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/photo/alt"
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/0/text",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 Bullet 1 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/1/text",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 Bullet 2 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/2/text",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 Bullet 3 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/3/text",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 Bullet 4 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/4/text",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 Bullet 5 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/chips/label",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 Pill list heading",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/chips/list/0",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 List 1 \u00b7 Pill",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/chips/list/1",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 List 2 \u00b7 Pill",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/chips/list/2",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 List 3 \u00b7 Pill",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/note/label",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 Note label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/note/text",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 Note text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/subtitle",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/tag",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/title",
+          "label": "Pick your path. \u00b7 Private Luxury Packages \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/bullets/0/text",
+          "label": "Pick your path. \u00b7 Kids Play Packages \u00b7 Bullet 1 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/bullets/1/text",
+          "label": "Pick your path. \u00b7 Kids Play Packages \u00b7 Bullet 2 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/bullets/2/text",
+          "label": "Pick your path. \u00b7 Kids Play Packages \u00b7 Bullet 3 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/chips/label",
+          "label": "Pick your path. \u00b7 Kids Play Packages \u00b7 Pill list heading",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/chips/list/0",
+          "label": "Pick your path. \u00b7 Kids Play Packages \u00b7 List 1 \u00b7 Pill",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/chips/list/1",
+          "label": "Pick your path. \u00b7 Kids Play Packages \u00b7 List 2 \u00b7 Pill",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/note/label",
+          "label": "Pick your path. \u00b7 Kids Play Packages \u00b7 Note label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/note/text",
+          "label": "Pick your path. \u00b7 Kids Play Packages \u00b7 Note text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/subtitle",
+          "label": "Pick your path. \u00b7 Kids Play Packages \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/tag",
+          "label": "Pick your path. \u00b7 Kids Play Packages \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/title",
+          "label": "Pick your path. \u00b7 Kids Play Packages \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/heading",
+          "label": "Pick your path. \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/statement",
+          "label": "Big statement",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/video",
+          "label": "Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        }
+      ]
+    },
+    "private-events": {
+      "source": "content/pages/private-events.json",
+      "fields": [
+        {
+          "path": "/buttons/0/label",
+          "label": "Top button 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/buttons/1/label",
+          "label": "Top button 2 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/alt",
+          "label": "Gallery photo 1 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/image",
+          "label": "Gallery photo 1 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/0/alt"
+        },
+        {
+          "path": "/gallery/1/alt",
+          "label": "Gallery photo 2 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/1/image",
+          "label": "Gallery photo 2 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/1/alt"
+        },
+        {
+          "path": "/gallery/2/alt",
+          "label": "Gallery photo 3 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/2/image",
+          "label": "Gallery photo 3 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/2/alt"
+        },
+        {
+          "path": "/gallery/3/alt",
+          "label": "Gallery photo 4 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/3/image",
+          "label": "Gallery photo 4 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/3/alt"
+        },
+        {
+          "path": "/gallery/4/alt",
+          "label": "Gallery photo 5 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/4/image",
+          "label": "Gallery photo 5 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/4/alt"
+        },
+        {
+          "path": "/gallery/5/alt",
+          "label": "Gallery photo 6 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/5/image",
+          "label": "Gallery photo 6 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/5/alt"
+        },
+        {
+          "path": "/heading",
+          "label": "Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/intro",
+          "label": "Introduction",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/alt",
+          "label": "Featured photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/image",
+          "label": "Featured photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/photo/alt"
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/0/text",
+          "label": "For the kids. \u00b7 Private Playdates \u00b7 Bullet 1 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/1/text",
+          "label": "For the kids. \u00b7 Private Playdates \u00b7 Bullet 2 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/2/text",
+          "label": "For the kids. \u00b7 Private Playdates \u00b7 Bullet 3 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/facts/0/label",
+          "label": "For the kids. \u00b7 Private Playdates \u00b7 Fact 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/facts/0/value",
+          "label": "For the kids. \u00b7 Private Playdates \u00b7 Fact 1 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/subtitle",
+          "label": "For the kids. \u00b7 Private Playdates \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/tag",
+          "label": "For the kids. \u00b7 Private Playdates \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/text",
+          "label": "For the kids. \u00b7 Private Playdates \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/title",
+          "label": "For the kids. \u00b7 Private Playdates \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/bullets/0/text",
+          "label": "For the kids. \u00b7 Themed & Specialty Playdates \u00b7 Bullet 1 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/bullets/1/text",
+          "label": "For the kids. \u00b7 Themed & Specialty Playdates \u00b7 Bullet 2 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/bullets/2/text",
+          "label": "For the kids. \u00b7 Themed & Specialty Playdates \u00b7 Bullet 3 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/bullets/3/text",
+          "label": "For the kids. \u00b7 Themed & Specialty Playdates \u00b7 Bullet 4 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/subtitle",
+          "label": "For the kids. \u00b7 Themed & Specialty Playdates \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/tag",
+          "label": "For the kids. \u00b7 Themed & Specialty Playdates \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/text",
+          "label": "For the kids. \u00b7 Themed & Specialty Playdates \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/title",
+          "label": "For the kids. \u00b7 Themed & Specialty Playdates \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/heading",
+          "label": "For the kids. \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/note",
+          "label": "For the kids. \u00b7 Note note",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/0/bold",
+          "label": "For the grown-ups. \u00b7 Private Adults' Night Out \u00b7 Bullet 1 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/0/text",
+          "label": "For the grown-ups. \u00b7 Private Adults' Night Out \u00b7 Bullet 1 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/1/bold",
+          "label": "For the grown-ups. \u00b7 Private Adults' Night Out \u00b7 Bullet 2 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/1/text",
+          "label": "For the grown-ups. \u00b7 Private Adults' Night Out \u00b7 Bullet 2 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/2/bold",
+          "label": "For the grown-ups. \u00b7 Private Adults' Night Out \u00b7 Bullet 3 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/2/text",
+          "label": "For the grown-ups. \u00b7 Private Adults' Night Out \u00b7 Bullet 3 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/button/label",
+          "label": "For the grown-ups. \u00b7 Private Adults' Night Out \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/subtitle",
+          "label": "For the grown-ups. \u00b7 Private Adults' Night Out \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/tag",
+          "label": "For the grown-ups. \u00b7 Private Adults' Night Out \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/text",
+          "label": "For the grown-ups. \u00b7 Private Adults' Night Out \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/title",
+          "label": "For the grown-ups. \u00b7 Private Adults' Night Out \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/heading",
+          "label": "For the grown-ups. \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/statement",
+          "label": "Big statement",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/video",
+          "label": "Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        }
+      ]
+    },
+    "toddler-classes": {
+      "source": "content/pages/toddler-classes.json",
+      "fields": [
+        {
+          "path": "/buttons/0/label",
+          "label": "Top button 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/buttons/1/label",
+          "label": "Top button 2 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/alt",
+          "label": "Gallery photo 1 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/image",
+          "label": "Gallery photo 1 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/0/alt"
+        },
+        {
+          "path": "/gallery/1/alt",
+          "label": "Gallery photo 2 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/1/image",
+          "label": "Gallery photo 2 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/1/alt"
+        },
+        {
+          "path": "/gallery/2/alt",
+          "label": "Gallery photo 3 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/2/image",
+          "label": "Gallery photo 3 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/2/alt"
+        },
+        {
+          "path": "/gallery/3/alt",
+          "label": "Gallery photo 4 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/3/image",
+          "label": "Gallery photo 4 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/3/alt"
+        },
+        {
+          "path": "/gallery/4/alt",
+          "label": "Gallery photo 5 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/4/image",
+          "label": "Gallery photo 5 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/4/alt"
+        },
+        {
+          "path": "/heading",
+          "label": "Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/intro",
+          "label": "Introduction",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/alt",
+          "label": "Featured photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/image",
+          "label": "Featured photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/photo/alt"
+        },
+        {
+          "path": "/sections/0/cards/0/button/label",
+          "label": "Section 1 \u00b7 Toddler Tuesday \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/facts/0/label",
+          "label": "Section 1 \u00b7 Toddler Tuesday \u00b7 Fact 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/facts/0/value",
+          "label": "Section 1 \u00b7 Toddler Tuesday \u00b7 Fact 1 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/facts/1/label",
+          "label": "Section 1 \u00b7 Toddler Tuesday \u00b7 Fact 2 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/facts/1/value",
+          "label": "Section 1 \u00b7 Toddler Tuesday \u00b7 Fact 2 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/facts/2/label",
+          "label": "Section 1 \u00b7 Toddler Tuesday \u00b7 Fact 3 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/facts/2/value",
+          "label": "Section 1 \u00b7 Toddler Tuesday \u00b7 Fact 3 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/subtitle",
+          "label": "Section 1 \u00b7 Toddler Tuesday \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/tag",
+          "label": "Section 1 \u00b7 Toddler Tuesday \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/text",
+          "label": "Section 1 \u00b7 Toddler Tuesday \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/title",
+          "label": "Section 1 \u00b7 Toddler Tuesday \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/button/label",
+          "label": "Section 1 \u00b7 Drop-Off & Play Thursday \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/facts/0/label",
+          "label": "Section 1 \u00b7 Drop-Off & Play Thursday \u00b7 Fact 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/facts/0/value",
+          "label": "Section 1 \u00b7 Drop-Off & Play Thursday \u00b7 Fact 1 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/facts/1/label",
+          "label": "Section 1 \u00b7 Drop-Off & Play Thursday \u00b7 Fact 2 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/facts/1/value",
+          "label": "Section 1 \u00b7 Drop-Off & Play Thursday \u00b7 Fact 2 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/facts/2/label",
+          "label": "Section 1 \u00b7 Drop-Off & Play Thursday \u00b7 Fact 3 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/facts/2/value",
+          "label": "Section 1 \u00b7 Drop-Off & Play Thursday \u00b7 Fact 3 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/subtitle",
+          "label": "Section 1 \u00b7 Drop-Off & Play Thursday \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/tag",
+          "label": "Section 1 \u00b7 Drop-Off & Play Thursday \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/text",
+          "label": "Section 1 \u00b7 Drop-Off & Play Thursday \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/title",
+          "label": "Section 1 \u00b7 Drop-Off & Play Thursday \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/button/label",
+          "label": "Section 2 \u00b7 Special Guest Teachers \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/subtitle",
+          "label": "Section 2 \u00b7 Special Guest Teachers \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/tag",
+          "label": "Section 2 \u00b7 Special Guest Teachers \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/text",
+          "label": "Section 2 \u00b7 Special Guest Teachers \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/title",
+          "label": "Section 2 \u00b7 Special Guest Teachers \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/statement",
+          "label": "Big statement",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/video",
+          "label": "Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        }
+      ]
+    },
+    "art-classes": {
+      "source": "content/pages/art-classes.json",
+      "fields": [
+        {
+          "path": "/buttons/0/label",
+          "label": "Top button 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/buttons/1/label",
+          "label": "Top button 2 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/alt",
+          "label": "Gallery photo 1 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/image",
+          "label": "Gallery photo 1 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/0/alt"
+        },
+        {
+          "path": "/gallery/1/alt",
+          "label": "Gallery photo 2 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/1/image",
+          "label": "Gallery photo 2 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/1/alt"
+        },
+        {
+          "path": "/gallery/2/alt",
+          "label": "Gallery photo 3 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/2/image",
+          "label": "Gallery photo 3 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/2/alt"
+        },
+        {
+          "path": "/gallery/3/alt",
+          "label": "Gallery photo 4 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/3/image",
+          "label": "Gallery photo 4 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/3/alt"
+        },
+        {
+          "path": "/gallery/4/alt",
+          "label": "Gallery photo 5 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/4/image",
+          "label": "Gallery photo 5 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/4/alt"
+        },
+        {
+          "path": "/heading",
+          "label": "Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/intro",
+          "label": "Introduction",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/alt",
+          "label": "Featured photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/image",
+          "label": "Featured photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/photo/alt"
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/0/bold",
+          "label": "The OLV Artists curriculum. \u00b7 How it works \u00b7 Bullet 1 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/0/text",
+          "label": "The OLV Artists curriculum. \u00b7 How it works \u00b7 Bullet 1 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/1/bold",
+          "label": "The OLV Artists curriculum. \u00b7 How it works \u00b7 Bullet 2 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/1/text",
+          "label": "The OLV Artists curriculum. \u00b7 How it works \u00b7 Bullet 2 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/2/bold",
+          "label": "The OLV Artists curriculum. \u00b7 How it works \u00b7 Bullet 3 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/2/text",
+          "label": "The OLV Artists curriculum. \u00b7 How it works \u00b7 Bullet 3 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/3/bold",
+          "label": "The OLV Artists curriculum. \u00b7 How it works \u00b7 Bullet 4 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/3/text",
+          "label": "The OLV Artists curriculum. \u00b7 How it works \u00b7 Bullet 4 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/subtitle",
+          "label": "The OLV Artists curriculum. \u00b7 How it works \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/tag",
+          "label": "The OLV Artists curriculum. \u00b7 How it works \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/title",
+          "label": "The OLV Artists curriculum. \u00b7 How it works \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/heading",
+          "label": "The OLV Artists curriculum. \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/intro",
+          "label": "The OLV Artists curriculum. \u00b7 Introduction",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/ribbon/0",
+          "label": "The OLV Artists curriculum. \u00b7 Ribbon 1 \u00b7 Scrolling ribbon",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/ribbon/1",
+          "label": "The OLV Artists curriculum. \u00b7 Ribbon 2 \u00b7 Scrolling ribbon",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/ribbon/2",
+          "label": "The OLV Artists curriculum. \u00b7 Ribbon 3 \u00b7 Scrolling ribbon",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/ribbon/3",
+          "label": "The OLV Artists curriculum. \u00b7 Ribbon 4 \u00b7 Scrolling ribbon",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/ribbon/4",
+          "label": "The OLV Artists curriculum. \u00b7 Ribbon 5 \u00b7 Scrolling ribbon",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/facts/0/label",
+          "label": "Featured classes. \u00b7 Little Artists \u00b7 Fact 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/facts/0/value",
+          "label": "Featured classes. \u00b7 Little Artists \u00b7 Fact 1 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/facts/1/label",
+          "label": "Featured classes. \u00b7 Little Artists \u00b7 Fact 2 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/facts/1/value",
+          "label": "Featured classes. \u00b7 Little Artists \u00b7 Fact 2 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/subtitle",
+          "label": "Featured classes. \u00b7 Little Artists \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/tag",
+          "label": "Featured classes. \u00b7 Little Artists \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/title",
+          "label": "Featured classes. \u00b7 Little Artists \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/1/facts/0/label",
+          "label": "Featured classes. \u00b7 Jr. Artists \u00b7 Fact 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/1/facts/0/value",
+          "label": "Featured classes. \u00b7 Jr. Artists \u00b7 Fact 1 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/1/facts/1/label",
+          "label": "Featured classes. \u00b7 Jr. Artists \u00b7 Fact 2 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/1/facts/1/value",
+          "label": "Featured classes. \u00b7 Jr. Artists \u00b7 Fact 2 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/1/subtitle",
+          "label": "Featured classes. \u00b7 Jr. Artists \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/1/tag",
+          "label": "Featured classes. \u00b7 Jr. Artists \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/1/title",
+          "label": "Featured classes. \u00b7 Jr. Artists \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/2/bullets/0/text",
+          "label": "Featured classes. \u00b7 1:1 Portfolio Prep \u00b7 Bullet 1 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/2/bullets/1/text",
+          "label": "Featured classes. \u00b7 1:1 Portfolio Prep \u00b7 Bullet 2 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/2/bullets/2/text",
+          "label": "Featured classes. \u00b7 1:1 Portfolio Prep \u00b7 Bullet 3 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/2/button/label",
+          "label": "Featured classes. \u00b7 1:1 Portfolio Prep \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/2/subtitle",
+          "label": "Featured classes. \u00b7 1:1 Portfolio Prep \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/2/tag",
+          "label": "Featured classes. \u00b7 1:1 Portfolio Prep \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/2/title",
+          "label": "Featured classes. \u00b7 1:1 Portfolio Prep \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/3/button/label",
+          "label": "Featured classes. \u00b7 Tuition & Registration \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/3/facts/0/label",
+          "label": "Featured classes. \u00b7 Tuition & Registration \u00b7 Fact 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/3/facts/0/value",
+          "label": "Featured classes. \u00b7 Tuition & Registration \u00b7 Fact 1 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/3/facts/1/label",
+          "label": "Featured classes. \u00b7 Tuition & Registration \u00b7 Fact 2 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/3/facts/1/value",
+          "label": "Featured classes. \u00b7 Tuition & Registration \u00b7 Fact 2 \u00b7 Value",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/3/subtitle",
+          "label": "Featured classes. \u00b7 Tuition & Registration \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/3/tag",
+          "label": "Featured classes. \u00b7 Tuition & Registration \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/3/title",
+          "label": "Featured classes. \u00b7 Tuition & Registration \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/heading",
+          "label": "Featured classes. \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/statement",
+          "label": "Big statement",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/video",
+          "label": "Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        }
+      ]
+    },
+    "special-events": {
+      "source": "content/pages/special-events.json",
+      "fields": [
+        {
+          "path": "/buttons/0/label",
+          "label": "Top button 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/buttons/1/label",
+          "label": "Top button 2 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/alt",
+          "label": "Gallery photo 1 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/image",
+          "label": "Gallery photo 1 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/0/alt"
+        },
+        {
+          "path": "/gallery/1/alt",
+          "label": "Gallery photo 2 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/1/image",
+          "label": "Gallery photo 2 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/1/alt"
+        },
+        {
+          "path": "/gallery/2/alt",
+          "label": "Gallery photo 3 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/2/image",
+          "label": "Gallery photo 3 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/2/alt"
+        },
+        {
+          "path": "/gallery/3/alt",
+          "label": "Gallery photo 4 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/3/image",
+          "label": "Gallery photo 4 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/3/alt"
+        },
+        {
+          "path": "/gallery/4/alt",
+          "label": "Gallery photo 5 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/4/image",
+          "label": "Gallery photo 5 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/4/alt"
+        },
+        {
+          "path": "/heading",
+          "label": "Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/intro",
+          "label": "Introduction",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/alt",
+          "label": "Featured photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/image",
+          "label": "Featured photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/photo/alt"
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/0/bold",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Bullet 1 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/0/text",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Bullet 1 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/1/bold",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Bullet 2 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/1/text",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Bullet 2 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/2/bold",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Bullet 3 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/2/text",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Bullet 3 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/3/bold",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Bullet 4 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/3/text",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Bullet 4 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/subtitle",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/tag",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/text",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/title",
+          "label": "Section 1 \u00b7 Family Events \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/button/label",
+          "label": "Section 1 \u00b7 Adult Celebrations & Socials \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/subtitle",
+          "label": "Section 1 \u00b7 Adult Celebrations & Socials \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/tag",
+          "label": "Section 1 \u00b7 Adult Celebrations & Socials \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/text",
+          "label": "Section 1 \u00b7 Adult Celebrations & Socials \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/title",
+          "label": "Section 1 \u00b7 Adult Celebrations & Socials \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/0/bold",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Bullet 1 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/0/text",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Bullet 1 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/1/bold",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Bullet 2 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/1/text",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Bullet 2 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/2/bold",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Bullet 3 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/2/text",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Bullet 3 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/3/bold",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Bullet 4 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/bullets/3/text",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Bullet 4 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/button/label",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/subtitle",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/tag",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/cards/0/title",
+          "label": "Booking & policies. \u00b7 How tickets work \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/1/heading",
+          "label": "Booking & policies. \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/statement",
+          "label": "Big statement",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/video",
+          "label": "Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        }
+      ]
+    },
+    "balloons-backdrops": {
+      "source": "content/pages/balloons-backdrops.json",
+      "fields": [
+        {
+          "path": "/buttons/0/label",
+          "label": "Top button 1 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/buttons/1/label",
+          "label": "Top button 2 \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/alt",
+          "label": "Gallery photo 1 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/0/image",
+          "label": "Gallery photo 1 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/0/alt"
+        },
+        {
+          "path": "/gallery/1/alt",
+          "label": "Gallery photo 2 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/1/image",
+          "label": "Gallery photo 2 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/1/alt"
+        },
+        {
+          "path": "/gallery/2/alt",
+          "label": "Gallery photo 3 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/2/image",
+          "label": "Gallery photo 3 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/2/alt"
+        },
+        {
+          "path": "/gallery/3/alt",
+          "label": "Gallery photo 4 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/3/image",
+          "label": "Gallery photo 4 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/3/alt"
+        },
+        {
+          "path": "/gallery/4/alt",
+          "label": "Gallery photo 5 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/4/image",
+          "label": "Gallery photo 5 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/4/alt"
+        },
+        {
+          "path": "/gallery/5/alt",
+          "label": "Gallery photo 6 \u00b7 Photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/gallery/5/image",
+          "label": "Gallery photo 6 \u00b7 Photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/gallery/5/alt"
+        },
+        {
+          "path": "/heading",
+          "label": "Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/intro",
+          "label": "Introduction",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/alt",
+          "label": "Featured photo description",
+          "kind": "alt",
+          "accent": false,
+          "maxLength": 500,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/photo/image",
+          "label": "Featured photo",
+          "kind": "image",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": "/photo/alt"
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/0/bold",
+          "label": "For any occasion. \u00b7 What We Bring to Life \u00b7 Bullet 1 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/0/text",
+          "label": "For any occasion. \u00b7 What We Bring to Life \u00b7 Bullet 1 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/1/bold",
+          "label": "For any occasion. \u00b7 What We Bring to Life \u00b7 Bullet 2 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/1/text",
+          "label": "For any occasion. \u00b7 What We Bring to Life \u00b7 Bullet 2 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/2/bold",
+          "label": "For any occasion. \u00b7 What We Bring to Life \u00b7 Bullet 3 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/2/text",
+          "label": "For any occasion. \u00b7 What We Bring to Life \u00b7 Bullet 3 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/3/bold",
+          "label": "For any occasion. \u00b7 What We Bring to Life \u00b7 Bullet 4 \u00b7 Bold opening",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/bullets/3/text",
+          "label": "For any occasion. \u00b7 What We Bring to Life \u00b7 Bullet 4 \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/subtitle",
+          "label": "For any occasion. \u00b7 What We Bring to Life \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/tag",
+          "label": "For any occasion. \u00b7 What We Bring to Life \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/0/title",
+          "label": "For any occasion. \u00b7 What We Bring to Life \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/button/label",
+          "label": "For any occasion. \u00b7 OLV Signature Gifts & Keepsakes \u00b7 Label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/subtitle",
+          "label": "For any occasion. \u00b7 OLV Signature Gifts & Keepsakes \u00b7 Subtitle",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/tag",
+          "label": "For any occasion. \u00b7 OLV Signature Gifts & Keepsakes \u00b7 Small label",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/text",
+          "label": "For any occasion. \u00b7 OLV Signature Gifts & Keepsakes \u00b7 Text",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/cards/1/title",
+          "label": "For any occasion. \u00b7 OLV Signature Gifts & Keepsakes \u00b7 Title",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/heading",
+          "label": "For any occasion. \u00b7 Heading",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/ribbon/0",
+          "label": "For any occasion. \u00b7 Ribbon 1 \u00b7 Scrolling ribbon",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/ribbon/1",
+          "label": "For any occasion. \u00b7 Ribbon 2 \u00b7 Scrolling ribbon",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/ribbon/2",
+          "label": "For any occasion. \u00b7 Ribbon 3 \u00b7 Scrolling ribbon",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/ribbon/3",
+          "label": "For any occasion. \u00b7 Ribbon 4 \u00b7 Scrolling ribbon",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/ribbon/4",
+          "label": "For any occasion. \u00b7 Ribbon 5 \u00b7 Scrolling ribbon",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/sections/0/ribbon/5",
+          "label": "For any occasion. \u00b7 Ribbon 6 \u00b7 Scrolling ribbon",
+          "kind": "text",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/statement",
+          "label": "Big statement",
+          "kind": "text",
+          "accent": true,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null
+        },
+        {
+          "path": "/video",
+          "label": "Looping video",
+          "kind": "video",
+          "accent": false,
+          "maxLength": 4000,
+          "required": true,
+          "altPath": null,
+          "acceptedTypes": [
+            "video/mp4",
+            "video/webm"
+          ],
+          "maxBytes": 20971520,
+          "maxDurationSeconds": 120,
+          "maxPixels": 8294400
+        }
+      ]
+    }
+  }
+}

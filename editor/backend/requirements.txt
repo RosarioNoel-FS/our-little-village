@@ -1,0 +1,2 @@
+Pillow==13.0.0
+gunicorn==27.0.1

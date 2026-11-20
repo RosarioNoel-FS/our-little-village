@@ -21,12 +21,49 @@ TILES = [("Text", "347-327-8166", "Send us a text", TEXT, "#ffbe1f", "#2a1a05", 
          ("Instagram", "@ourlittlevillage.llc", "See our latest work", INSTA, "#ffc9dc", "#3f0f2c", "s4 has-fan", "", ["balloons-a", "parties-a", "private-c"]),
          ("Classes", "Ask about toddler or art classes", "Text us to sign up", TEXT, "#ffe9a8", "#053f3c", "s6 has-fan", "", ["art-a", "toddler-a", "art-b"])]
 
-# Page order (also the "Next:" chain) and each page's locked color theme / video. Not editable in the CMS.
+# Page order, next-page chain and color themes stay locked. Existing loop sources may be replaced.
 ORDER = [("parties.html", "parties"), ("private-events.html", "private"), ("toddler-classes.html", "toddler"),
          ("art-classes.html", "art"), ("special-events.html", "special"), ("balloons-backdrops.html", "balloons")]
 # Where a CMS button can point. The editor picks one of these names, never a raw URL.
 LINKS = {"text": TEXT, "call": CALL, "instagram": INSTA, "contact": "contact.html", "work": "#work"}
 SPEEDS = (-34, 46, -60)
+
+
+# Preview bindings are opt-in. Normal builds produce the same public markup.
+PREVIEW = os.environ.get("OLV_EDITOR_PREVIEW") == "1"
+OUT = os.environ.get("OLV_EDITOR_OUTPUT", SITE)
+
+class Bound(str):
+    def __new__(cls, value, path):
+        obj = super().__new__(cls, value)
+        obj.path = path
+        return obj
+
+
+def bind(value, path=""):
+    if isinstance(value, str):
+        return Bound(value, path)
+    if isinstance(value, list):
+        return [bind(v, path + "/" + str(i)) for i, v in enumerate(value)]
+    if isinstance(value, dict):
+        return {k: bind(v, path + "/" + k) for k, v in value.items()}
+    return value
+
+
+def editable(s, rendered):
+    if PREVIEW and isinstance(s, Bound) and s:
+        return '<span data-cms="%s">%s</span>' % (e(s.path), rendered)
+    return rendered
+
+
+def t(s):
+    return editable(s, e(s))
+
+
+def photo_attrs(alt):
+    if PREVIEW and isinstance(alt, Bound):
+        return ' data-cms="%s" data-cms-alt="%s"' % (e(alt.path.rsplit("/", 1)[0] + "/image"), e(alt.path))
+    return ""
 
 
 def e(s):
@@ -35,7 +72,7 @@ def e(s):
 
 def em(s):
     """Editor text with *word* marks -> escaped HTML with <em> (the script-font accent)."""
-    return re.sub(r"\*(.+?)\*", r"<em>\1</em>", e(s))
+    return editable(s, re.sub(r"\*(.+?)\*", r"<em>\1</em>", e(s)))
 
 
 def img(path):
@@ -45,13 +82,32 @@ def img(path):
     return path.lstrip("/")
 
 
+def video(path):
+    """Only approved local MP4/WebM files; never arbitrary URLs or script schemes."""
+    if not re.fullmatch(r"/?assets/work/[\w.-]+\.(mp4|webm)", path, re.I):
+        raise ValueError("unexpected video path: %r" % path)
+    return path.lstrip("/")
+
+
+def video_attrs(path):
+    return ' data-cms="%s"' % e(path) if PREVIEW else ""
+
+
+def home_video_attrs(c, clip):
+    if not PREVIEW and not c.get("video"):
+        return ""
+    source = video(c.get("video", "assets/work/" + clip + ".mp4"))
+    binding = ' data-cms-video="/panels/%s/video"' % e(clip) if PREVIEW else ""
+    return ' data-video-src="%s"%s' % (e(source), binding)
+
+
 def link(b):
     return b["label"], LINKS[b["to"]]
 
 
 def load(name):
     with open(os.path.join(SITE, "content", name)) as f:
-        return json.load(f)
+        return bind(json.load(f)) if PREVIEW else json.load(f)
 
 
 def share(file, title, desc, card):
@@ -85,7 +141,7 @@ def nav(current):
 def action(i, a):
     label, url = a
     ext = ' target="_blank" rel="noopener"' if url.startswith("https") else ""
-    return '<a class="btn %s" href="%s"%s>%s</a>' % ("main" if i == 0 else "alt", url, ext, e(label))
+    return '<a class="btn %s" href="%s"%s>%s</a>' % ("main" if i == 0 else "alt", url, ext, t(label))
 
 
 def gallery(items):
@@ -94,40 +150,40 @@ def gallery(items):
         cols[i % 3].append(it)
     out = ""
     for s, col in zip(SPEEDS, cols):
-        imgs = "".join('<img loading="lazy" src="%s" alt="%s">' % (n, e(a)) for n, a in col)
+        imgs = "".join('<img loading="lazy" src="%s" alt="%s"%s>' % (n, e(a), photo_attrs(a)) for n, a in col)
         out += '<div class="col" style="--s:%d">%s</div>' % (s, imgs)
     return out
 
 
 def card(c, i):
-    out = '<p class="tag">%s</p><h3>%s</h3><p class="meta">%s</p>' % (e(c["tag"]), e(c["title"]), e(c["meta"]))
+    out = '<p class="tag">%s</p><h3>%s</h3><p class="meta">%s</p>' % (t(c["tag"]), t(c["title"]), t(c["meta"]))
     if c.get("text"):
-        out += '<p class="body">%s</p>' % e(c["text"])
+        out += '<p class="body">%s</p>' % t(c["text"])
     if c.get("facts"):
-        out += '<dl class="facts">%s</dl>' % "".join('<div><dt>%s</dt><dd>%s</dd></div>' % (e(l), e(v)) for l, v in c["facts"])
+        out += '<dl class="facts">%s</dl>' % "".join('<div><dt>%s</dt><dd>%s</dd></div>' % (t(l), t(v)) for l, v in c["facts"])
     if c.get("items"):
-        out += "<ul>%s</ul>" % "".join("<li><strong>%s</strong> %s</li>" % (e(x[0]), e(x[1])) if isinstance(x, tuple) else "<li>%s</li>" % e(x) for x in c["items"])
+        out += "<ul>%s</ul>" % "".join("<li><strong>%s</strong> %s</li>" % (t(x[0]), t(x[1])) if isinstance(x, tuple) else "<li>%s</li>" % t(x) for x in c["items"])
     if c.get("chips"):
-        out += '<p class="chips-label">%s</p><ul class="chips">%s</ul>' % (e(c["chips"][0]), "".join("<li>%s</li>" % e(x) for x in c["chips"][1]))
+        out += '<p class="chips-label">%s</p><ul class="chips">%s</ul>' % (t(c["chips"][0]), "".join("<li>%s</li>" % t(x) for x in c["chips"][1]))
     if c.get("note"):
-        out += '<p class="note"><strong>%s</strong> %s</p>' % (e(c["note"][0]), e(c["note"][1]))
+        out += '<p class="note"><strong>%s</strong> %s</p>' % (t(c["note"][0]), t(c["note"][1]))
     if c.get("link"):
         label, url = c["link"]
         ext = ' target="_blank" rel="noopener"' if url.startswith("https") else ""
-        out += '<a class="card-link" href="%s"%s>%s <span aria-hidden="true">&rarr;</span></a>' % (url, ext, e(label))
+        out += '<a class="card-link" href="%s"%s>%s <span aria-hidden="true">&rarr;</span></a>' % (url, ext, t(label))
     return '<article class="card reveal%s" style="--i:%d">%s</article>' % (" wide" if c.get("wide") else "", i, out)
 
 
 def group(g):
     head = '<h2 class="group-head reveal">%s</h2>' % g["head"] if g.get("head") else ""
     if g.get("intro"):
-        head += '<p class="group-intro reveal">%s</p>' % e(g["intro"])
+        head += '<p class="group-intro reveal">%s</p>' % t(g["intro"])
     ribbon = ""
     if g.get("marquee"):
-        run = "".join("<li>%s</li>" % e(x) for x in g["marquee"])
+        run = "".join("<li>%s</li>" % t(x) for x in g["marquee"])
         # second copy makes the loop seamless; screen readers get the first list only
         ribbon = '<div class="ribbon"><ul class="run">%s</ul><ul class="run" aria-hidden="true">%s</ul></div>' % (run, run)
-    note = '<p class="group-note reveal">%s</p>' % e(g["note"]) if g.get("note") else ""
+    note = '<p class="group-note reveal">%s</p>' % t(g["note"]) if g.get("note") else ""
     cards = "".join(card(c, i) for i, c in enumerate(g["cards"]))
     return '<section class="details">%s%s<div class="cards">%s</div>%s</section>' % (head, ribbon, cards, note)
 
@@ -141,7 +197,7 @@ def to_page(d, file, clip):
                     chips=(c["chips"]["label"], c["chips"]["list"]) if (c.get("chips") or {}).get("list") else None,
                     note=(c["note"]["label"], c["note"]["text"]) if (c.get("note") or {}).get("text") else None,
                     link=link(c["button"]) if (c.get("button") or {}).get("label") else None)
-    return dict(file=file, clip=clip, title=d["title"], h1=em(d["heading"]), seo=d["description"], lede=d["intro"],
+    return dict(file=file, clip=clip, video=video(d.get("video", "assets/work/" + clip + ".mp4")), title=d["title"], h1=em(d["heading"]), seo=d["description"], lede=d["intro"],
                 actions=[link(b) for b in d["buttons"]], statement=em(d["statement"]),
                 groups=[dict(head=em(g["heading"]) if g.get("heading") else "", intro=g.get("intro", ""), marquee=g.get("ribbon") or [],
                              note=g.get("note", ""), cards=[card(c) for c in g["cards"]]) for g in d["sections"]],
@@ -150,14 +206,16 @@ def to_page(d, file, clip):
 
 def what_we_do(d):
     """The homepage "What we do" panels. Order, colors, numbers and links stay fixed; text and photos come from home.json."""
-    out = '  <header class="offer-head"><h2>%s</h2><p>%s</p></header>\n\n' % (em(d["heading"]), e(d["intro"]))
+    out = '  <header class="offer-head"><h2>%s</h2><p>%s</p></header>\n\n' % (em(d["heading"]), t(d["intro"]))
     for n, (file, clip) in enumerate(ORDER):
         c = d["panels"][clip]
         out += ('  <article class="ch" data-clip="%s">\n    <div class="ch-text"><span class="num">%02d</span><h3>%s</h3><p>%s</p><a class="more" href="%s">%s</a></div>\n'
-                '    <div class="ch-media"><div class="arch"></div>\n      <img class="float a" loading="lazy" src="%s" alt="%s">\n'
-                '      <img class="float b" loading="lazy" src="%s" alt="%s"></div>\n  </article>\n') % (
-            clip, n + 1, em(c["heading"]), e(c["text"]), file, e(c["button"]),
-            img(c["photo_1"]["image"]), e(c["photo_1"]["alt"]), img(c["photo_2"]["image"]), e(c["photo_2"]["alt"]))
+                '    <div class="ch-media"><div class="arch"%s></div>\n      <img class="float a" loading="lazy" src="%s" alt="%s"%s>\n'
+                '      <img class="float b" loading="lazy" src="%s" alt="%s"%s></div>\n  </article>\n') % (
+            clip, n + 1, em(c["heading"]), t(c["text"]), file, t(c["button"]), home_video_attrs(c, clip),
+            img(c["photo_1"]["image"]), e(c["photo_1"]["alt"]), photo_attrs(c["photo_1"]["alt"]), img(c["photo_2"]["image"]), e(c["photo_2"]["alt"]), photo_attrs(c["photo_2"]["alt"]))
+    if any(c.get("video") for c in d["panels"].values()):
+        out += '<script src="assets/video-sources.js" defer></script>\n'
     return out + "\n"
 
 
@@ -189,12 +247,12 @@ def page(p, nxt):
   <div class="fx">
     <p class="crumb"><a href="index.html">Our Little Village</a></p>
     <h1>{p['h1']}</h1>
-    <p class="lede">{e(p['lede'])}</p>
+    <p class="lede">{t(p['lede'])}</p>
     <div class="cta">{cta}</div>
   </div>
   <div class="stage">
-    <div class="arch"><video muted loop playsinline preload="none" poster="assets/work/{p['clip']}.jpg" data-src="assets/work/{p['clip']}.mp4" aria-hidden="true"></video></div>
-    <img class="float" src="{p['float'][0]}" alt="{e(p['float'][1])}">
+    <div class="arch"><video muted loop playsinline preload="none" poster="assets/work/{p['clip']}.jpg" data-src="{e(p['video'])}" aria-hidden="true"{video_attrs("/video")}></video></div>
+    <img class="float" src="{p['float'][0]}" alt="{e(p['float'][1])}"{photo_attrs(p['float'][1])}>
   </div>
 </section>
 </header>
@@ -336,17 +394,17 @@ def privacy_page():
 """
 
 
-with open(os.path.join(SITE, "privacy.html"), "w") as f:
+with open(os.path.join(OUT, "privacy.html"), "w") as f:
     f.write(privacy_page())
 print("wrote privacy.html")
 
-with open(os.path.join(SITE, "contact.html"), "w") as f:
+with open(os.path.join(OUT, "contact.html"), "w") as f:
     f.write(contact_page())
 print("wrote contact.html")
 
 PAGES = [to_page(load("pages/%s.json" % f[:-5]), f, clip) for f, clip in ORDER]
 for i, p in enumerate(PAGES):
-    with open(os.path.join(SITE, p["file"]), "w") as f:
+    with open(os.path.join(OUT, p["file"]), "w") as f:
         f.write(page(p, PAGES[(i + 1) % len(PAGES)]))
     print("wrote", p["file"])
 
@@ -356,6 +414,6 @@ with open(home) as f:
 a, b = "<!-- cms:what-we-do", "  <!-- /cms:what-we-do -->"
 start = s.index("\n", s.index(a)) + 1
 s = s[:start] + what_we_do(load("home.json")) + s[s.index(b):]
-with open(home, "w") as f:
+with open(os.path.join(OUT, "index.html"), "w") as f:
     f.write(s)
 print("wrote index.html (What we do)")

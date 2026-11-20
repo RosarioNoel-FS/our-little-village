@@ -1,0 +1,12 @@
+.git
+**/.state
+**/.preview
+**/__pycache__
+**/.venv
+**/venv
+**/.env*
+**/*.pem
+**/*.key
+**/*sqlite*
+**/session.key
+.openai
